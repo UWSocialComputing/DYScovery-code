@@ -5,9 +5,10 @@
 
 export default function Post({ image }) {
   return (
-    <div className="w-56 m-6 bg-white shadow rounded-lg">
+    <div className="w-56 my-3 bg-white shadow rounded-lg">
       <img
         src={image}
+        alt="some description"
         className="object-cover aspect-[5/3] w-full rounded-t-lg"
       />
 
@@ -17,8 +18,9 @@ export default function Post({ image }) {
           <p className="text-sm">4/28-4/29</p>
         </div>
         <p className="text-sm">
-          2 <a className="underline decoration-pink-500/60">females</a> wants 2{" "}
-          <a className="underline decoration-pink-500/60">females</a>
+          2 <span className="underline decoration-pink-500/60">females</span>{" "}
+          wants 2{" "}
+          <span className="underline decoration-pink-500/60">females</span>
         </p>
         <p className="text-sm text-gray-500">$150-$200 /room /night</p>
         <p className="text-sm truncate text-gray-500">

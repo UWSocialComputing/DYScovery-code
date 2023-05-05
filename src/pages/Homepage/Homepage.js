@@ -1,16 +1,16 @@
-import "./Homepage.css";
 import * as React from "react";
-import Title from "../../components/Title/title";
-import SearchBar from "../../components/SearchBar/searchBar";
-import Posts from "../../components/Post/posts";
+import Title from "../../components/Title/Title";
+import EventSearchBar from "../../components/EventSearchBar/EventSearchBar";
+import Posts from "../../components/Post/Posts";
 
 function Homepage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8">
+    <div className="min-h-screen mx-32 py-3 flex flex-col justify-between">
       <Title />
-      <SearchBar />
+      <EventSearchBar />
+      <div className="self-start text-xl font-semibold">Explore...</div>
       <Posts />
-    </main>
+    </div>
   );
 }
 

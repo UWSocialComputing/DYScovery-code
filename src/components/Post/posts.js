@@ -1,4 +1,4 @@
-import Post from "./post";
+import Post from "./Post";
 
 /**
  *
@@ -17,10 +17,11 @@ export default function Posts() {
   };
 
   return (
-    <div className="mt-3 flex flex-wrap justify-between content-evenly">
+    <div className="w-full my-3 flex flex-wrap justify-between content-evenly">
       <Post {...obj1} />
       <Post {...obj2} />
       <Post {...obj1} />
+      <Post {...obj2} />
     </div>
   );
 }

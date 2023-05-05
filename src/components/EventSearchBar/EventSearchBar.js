@@ -1,11 +1,8 @@
-/**
- *
- * @returns A search bar component.
- */
+import { Link } from "react-router-dom";
 
-export default function SearchBar() {
+export default function EventSearchBar() {
   return (
-    <div className="mt-3 w-2/3">
+    <div className="w-full my-3">
       <form>
         <label
           htmlFor="default-search"
@@ -38,12 +35,14 @@ export default function SearchBar() {
             placeholder="Search event..."
             required
           />
-          <button
-            type="submit"
-            className="text-white absolute right-2.5 bottom-2.5 bg-cyan-500 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Search
-          </button>
+          <Link to="/results">
+            <button
+              type="submit"
+              className="text-white absolute right-2.5 bottom-2.5 bg-cyan-500 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Search
+            </button>
+          </Link>
         </div>
       </form>
     </div>

@@ -5,7 +5,7 @@
 
 export default function Title() {
   return (
-    <div className="grid place-items-center">
+    <div className="grid place-items-center my-3">
       <div className="text-5xl font-extrabold">
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-blue-500">
           DYScovery.com
