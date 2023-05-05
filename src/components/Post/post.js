@@ -1,7 +1,4 @@
-/**
- *
- * @returns A post component that has the posts.
- */
+import { Link } from "react-router-dom";
 
 export default function Post({ image }) {
   return (
@@ -28,9 +25,11 @@ export default function Post({ image }) {
         </p>
 
         <div className="grid place-items-center">
-          <button className="mt-2 px-6 py-1 bg-cyan-500 hover:bg-cyan-700 text-white font-bold rounded">
-            More
-          </button>
+          <Link to="/DYScovery-code/details">
+            <button className="mt-2 px-6 py-1 bg-cyan-500 hover:bg-cyan-700 text-white font-bold rounded-lg">
+              More
+            </button>
+          </Link>
         </div>
       </div>
     </div>

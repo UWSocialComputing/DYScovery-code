@@ -1,14 +1,13 @@
 import * as React from "react";
 import Title from "../../components/Title/Title";
-import Posts from "../../components/Post/Posts";
 
-function ResultPage() {
+function DetailPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-8">
       <Title />
-      <Posts />
+      <div>Details Page Has Nothing Yet</div>
     </div>
   );
 }
 
-export default ResultPage;
+export default DetailPage;

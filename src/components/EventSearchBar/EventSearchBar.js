@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function EventSearchBar() {
+export default function EventSearchBar({ showSearchBtn = true }) {
   return (
     <div className="w-full my-3">
       <form>
@@ -35,14 +35,16 @@ export default function EventSearchBar() {
             placeholder="Search event..."
             required
           />
-          <Link to="/DYScovery-code/results">
-            <button
-              type="submit"
-              className="text-white absolute right-2.5 bottom-2.5 bg-cyan-500 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Search
-            </button>
-          </Link>
+          {showSearchBtn && (
+            <Link to="/DYScovery-code/results">
+              <button
+                type="submit"
+                className="text-white absolute right-2.5 bottom-2.5 bg-cyan-500 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Search
+              </button>
+            </Link>
+          )}
         </div>
       </form>
     </div>

@@ -6,7 +6,7 @@ import Posts from "../../components/Post/Posts";
 function Homepage() {
   return (
     <div className="min-h-screen mx-32 py-3 flex flex-col justify-between">
-      <Title />
+      <Title showTag={true} />
       <EventSearchBar />
       <div className="self-start text-xl font-semibold">Explore...</div>
       <Posts />

@@ -3,7 +3,7 @@
  * @returns A website title component.
  */
 
-export default function Title() {
+export default function Title({ showTag = false }) {
   return (
     <div className="grid place-items-center my-3">
       <div className="text-5xl font-extrabold">
@@ -11,9 +11,11 @@ export default function Title() {
           DYScovery.com
         </span>
       </div>
-      <p className="mt-3 text-sm text-gray-500">
-        Find the short-term roommates for your next event!
-      </p>
+      {showTag && (
+        <p className="mt-3 text-sm text-gray-500">
+          Find the short-term roommates for your next event!
+        </p>
+      )}
     </div>
   );
 }

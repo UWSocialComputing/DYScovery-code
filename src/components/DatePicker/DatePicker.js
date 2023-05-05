@@ -2,18 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import Datepicker from "tailwind-datepicker-react";
 
-const options = {
-  title: "Demo Title",
-  autoHide: true,
-  todayBtn: true,
-  clearBtn: true,
-  maxDate: new Date("2030-01-01"),
-  minDate: new Date("1950-01-01"),
-  defaultDate: new Date("2022-01-01"),
-  language: "en",
-};
-
-export default function DateRangePicker() {
+export default function DatePicker({ dateTitle }) {
   const [show, setShow] = useState(false);
   const handleChange = (selectedDate) => {
     console.log(selectedDate);
@@ -22,8 +11,13 @@ export default function DateRangePicker() {
     setShow(state);
   };
 
+  const options = {
+    title: dateTitle,
+  };
+
   return (
     <div>
+      <h1 className="text-xs text-grey-300">{dateTitle}</h1>
       <Datepicker
         options={options}
         onChange={handleChange}
