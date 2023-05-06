@@ -2,11 +2,13 @@ import * as React from "react";
 import { useState } from "react";
 import Datepicker from "tailwind-datepicker-react";
 
-export default function DatePicker({ dateTitle }) {
+export default function DatePicker({
+  dateTitle,
+  handleChange,
+  showTitle = true,
+}) {
   const [show, setShow] = useState(false);
-  const handleChange = (selectedDate) => {
-    console.log(selectedDate);
-  };
+
   const handleClose = (state) => {
     setShow(state);
   };
@@ -17,7 +19,7 @@ export default function DatePicker({ dateTitle }) {
 
   return (
     <div>
-      <h1 className="text-xs text-grey-300">{dateTitle}</h1>
+      {showTitle && <h1 className="text-xs text-grey-300">{dateTitle}</h1>}
       <Datepicker
         options={options}
         onChange={handleChange}

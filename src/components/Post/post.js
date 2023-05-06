@@ -31,7 +31,7 @@ const getGenderLabels = (numOfFemales, numOfMales, numOfNonBinary) => {
     <span key={gender.label}>
       {gender.count}{" "}
       <span className={`underline decoration-${gender.color}/60`}>
-        {gender.label}
+        {gender.label}{" "}
       </span>
     </span>
   ));
