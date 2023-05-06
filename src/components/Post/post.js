@@ -22,7 +22,7 @@ const getGenderLabels = (numOfFemales, numOfMales, numOfNonBinary) => {
   if (numOfNonBinary > 0) {
     genderLabels.push({
       count: numOfNonBinary,
-      label: `${numOfNonBinary} ${numOfNonBinary > 1 ? "people" : "person"}`,
+      label: `${numOfNonBinary > 1 ? "people" : "person"}`,
       color: "gray-500",
     });
   }
@@ -31,8 +31,8 @@ const getGenderLabels = (numOfFemales, numOfMales, numOfNonBinary) => {
     <span key={gender.label}>
       {gender.count}{" "}
       <span className={`underline decoration-${gender.color}/60`}>
-        {gender.label}{" "}
-      </span>
+        {gender.label}
+      </span>{" "}
     </span>
   ));
 };
@@ -55,7 +55,7 @@ export default function Post({
       <img
         src={image}
         alt="some description"
-        className="object-cover aspect-[5/3] w-full rounded-t-lg"
+        className="object-cover aspect-[8/3] w-full rounded-t-lg"
       />
 
       <div className="px-6 p-2 flex flex-col space-y-0.5">
@@ -65,16 +65,14 @@ export default function Post({
             {checkInDate} - {checkOutDate}
           </p>
         </div>
-        <p className="text-sm">
-          <p className="text-sm">
-            {getGenderLabels(hasNumOfFemales, hasNumOfMales, hasNumOfNonBinary)}{" "}
-            wants{" "}
-            {getGenderLabels(
-              wantNumOfFemales,
-              wantNumOfMales,
-              wantNumOfNonBinary
-            )}
-          </p>
+        <p className="text-sm truncate">
+          {getGenderLabels(hasNumOfFemales, hasNumOfMales, hasNumOfNonBinary)}{" "}
+          wants{" "}
+          {getGenderLabels(
+            wantNumOfFemales,
+            wantNumOfMales,
+            wantNumOfNonBinary
+          )}
         </p>
         <p className="text-sm text-gray-500">{budget} /room /night</p>
         <p className="text-sm truncate text-gray-500">{location}</p>
