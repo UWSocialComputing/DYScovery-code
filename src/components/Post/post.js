@@ -1,8 +1,57 @@
 import { Link } from "react-router-dom";
 
-export default function Post({ image }) {
+const getGenderLabels = (numOfFemales, numOfMales, numOfNonBinary) => {
+  const genderLabels = [];
+
+  if (numOfFemales > 0) {
+    genderLabels.push({
+      count: numOfFemales,
+      label: `${numOfFemales > 1 ? "females" : "female"}`,
+      color: "pink-500",
+    });
+  }
+
+  if (numOfMales > 0) {
+    genderLabels.push({
+      count: numOfMales,
+      label: `${numOfMales > 1 ? "males" : "male"}`,
+      color: "sky-500",
+    });
+  }
+
+  if (numOfNonBinary > 0) {
+    genderLabels.push({
+      count: numOfNonBinary,
+      label: `${numOfNonBinary} ${numOfNonBinary > 1 ? "people" : "person"}`,
+      color: "gray-500",
+    });
+  }
+
+  return genderLabels.map((gender) => (
+    <span key={gender.label}>
+      {gender.count}{" "}
+      <span className={`underline decoration-${gender.color}/60`}>
+        {gender.label}
+      </span>
+    </span>
+  ));
+};
+
+export default function Post({
+  image,
+  title,
+  checkInDate,
+  checkOutDate,
+  hasNumGenders,
+  wantNumGenders,
+  budget,
+  location,
+}) {
+  const [hasNumOfFemales, hasNumOfMales, hasNumOfNonBinary] = hasNumGenders;
+  const [wantNumOfFemales, wantNumOfMales, wantNumOfNonBinary] = wantNumGenders;
+
   return (
-    <div className="w-56 my-3 bg-white shadow rounded-lg">
+    <div className="w-64 my-3 bg-white shadow rounded-lg">
       <img
         src={image}
         alt="some description"
@@ -11,18 +60,24 @@ export default function Post({ image }) {
 
       <div className="px-6 p-2 flex flex-col space-y-0.5">
         <div className="flex justify-between items-center">
-          <p className="font-medium">DYS Concert</p>
-          <p className="text-sm">4/28-4/29</p>
+          <p className="font-medium">{title}</p>
+          <p className="text-sm">
+            {checkInDate} - {checkOutDate}
+          </p>
         </div>
         <p className="text-sm">
-          2 <span className="underline decoration-pink-500/60">females</span>{" "}
-          wants 2{" "}
-          <span className="underline decoration-pink-500/60">females</span>
+          <p className="text-sm">
+            {getGenderLabels(hasNumOfFemales, hasNumOfMales, hasNumOfNonBinary)}{" "}
+            wants{" "}
+            {getGenderLabels(
+              wantNumOfFemales,
+              wantNumOfMales,
+              wantNumOfNonBinary
+            )}
+          </p>
         </p>
-        <p className="text-sm text-gray-500">$150-$200 /room /night</p>
-        <p className="text-sm truncate text-gray-500">
-          Warwick Seattle, Downtown Seattle, wowww
-        </p>
+        <p className="text-sm text-gray-500">{budget} /room /night</p>
+        <p className="text-sm truncate text-gray-500">{location}</p>
 
         <div className="grid place-items-center">
           <Link to="/DYScovery-code/details">

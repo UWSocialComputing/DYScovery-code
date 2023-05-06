@@ -1,0 +1,32 @@
+[
+    {
+        "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "title": "DYS Concert",
+        "checkInDate": "4/28",
+        "checkOutDate": "4/29",
+        "hasNumGenders": [2, 0, 0],
+        "wantNumGenders": [2, 0, 0],
+        "budget": "$150-$200",
+        "location": "Warwick Seattle, Downtown Seattle, wowww"
+    },
+    {
+        "image": "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "title": "Romantic Getaway",
+        "checkInDate": "5/12",
+        "checkOutDate": "5/14",
+        "hasNumGenders": [1, 0, 0],
+        "wantNumGenders": [0, 1, 0],
+        "budget": "$300-$400",
+        "location": "The Ritz Carlton, Marina del Rey"
+    },
+    {
+        "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "title": "Weekend Getaway",
+        "checkInDate": "6/11",
+        "checkOutDate": "6/13",
+        "hasNumGenders": [0, 2, 0],
+        "wantNumGenders": [2, 0, 0],
+        "budget": "$200-$250",
+        "location": "Hotel Zephyr, San Francisco"
+    }
+]

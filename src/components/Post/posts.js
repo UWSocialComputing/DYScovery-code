@@ -1,27 +1,17 @@
 import Post from "./Post";
+import postsData from "../../data/posts.json";
 
-/**
- *
- * @returns A post component that has the posts.
- */
-
-export default function Posts() {
-  const obj1 = {
-    image:
-      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
-  };
-
-  const obj2 = {
-    image:
-      "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
-  };
+export default function Posts({ showPartial = false }) {
+  const limitCnt = 3; // only show 3 posts on the homepage
+  const limitedPostsData = showPartial
+    ? postsData.slice(0, limitCnt)
+    : postsData;
 
   return (
     <div className="w-full my-3 flex flex-wrap justify-between content-evenly">
-      <Post {...obj1} />
-      <Post {...obj2} />
-      <Post {...obj1} />
-      <Post {...obj2} />
+      {limitedPostsData.map((post, index) => (
+        <Post key={index} {...post} />
+      ))}
     </div>
   );
 }

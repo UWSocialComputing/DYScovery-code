@@ -9,7 +9,7 @@ function Homepage() {
       <Title showTag={true} />
       <EventSearchBar />
       <div className="self-start text-xl font-semibold">Explore...</div>
-      <Posts />
+      <Posts showPartial={true} />
     </div>
   );
 }
