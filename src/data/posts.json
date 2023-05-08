@@ -1,6 +1,10 @@
 [
   {
-    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "images": [
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+    ],
     "title": "DYS Concert",
     "checkInDate": "4/28",
     "checkOutDate": "4/29",
@@ -10,7 +14,9 @@
     "location": "Warwick Seattle, Downtown Seattle, wowww"
   },
   {
-    "image": "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "images": [
+      "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+    ],
     "title": "Romantic Getaway",
     "checkInDate": "5/12",
     "checkOutDate": "5/14",
@@ -20,7 +26,10 @@
     "location": "The Ritz Carlton, Marina del Rey"
   },
   {
-    "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "images": [
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+    ],
     "title": "Weekend Getaway",
     "checkInDate": "6/11",
     "checkOutDate": "6/13",
@@ -30,7 +39,9 @@
     "location": "Hotel Zephyr, San Francisco"
   },
   {
-    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "images": [
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+    ],
     "title": "Romantic Getaway",
     "checkInDate": "8/14",
     "checkOutDate": "8/17",
@@ -40,7 +51,10 @@
     "location": "Bardessono Hotel and Spa, Napa Valley"
   },
   {
-    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "images": [
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+    ],
     "title": "Business Trip",
     "checkInDate": "10/20",
     "checkOutDate": "10/24",
@@ -48,15 +62,5 @@
     "wantNumGenders": [0, 1, 0],
     "budget": "$800-$900",
     "location": "Westin San Francisco Airport"
-  },
-  {
-    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
-    "title": "Family Vacation",
-    "checkInDate": "7/15",
-    "checkOutDate": "7/22",
-    "hasNumGenders": [0, 0, 1],
-    "wantNumGenders": [0, 0, 1],
-    "budget": "$1200-$1400",
-    "location": "The Ritz-Carlton, Half Moon Bay"
   }
 ]

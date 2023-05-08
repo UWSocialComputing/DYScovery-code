@@ -38,8 +38,34 @@ const getGenderLabels = (numOfFemales, numOfMales, numOfNonBinary) => {
   ));
 };
 
+const generateImages = (images) => {
+  if (images.length > 1) {
+    return (
+      <div className="h-32">
+        <Carousel slide={false} indicators={false}>
+          {images.map((imageSrc) => (
+            <img
+              src={imageSrc}
+              alt="..."
+              className="object-cover aspect-[2/1] w-full"
+            />
+          ))}
+        </Carousel>
+      </div>
+    );
+  }
+
+  return images.map((imageSrc) => (
+    <img
+      src={imageSrc}
+      alt="..."
+      className="object-cover aspect-[2/1] w-full rounded-lg"
+    />
+  ));
+};
+
 export default function Post({
-  image,
+  images,
   title,
   checkInDate,
   checkOutDate,
@@ -53,30 +79,12 @@ export default function Post({
 
   return (
     <div className="w-64 my-3 bg-white shadow rounded-lg">
-      <div className="h-24 rounded-t-lg">
-        <Carousel slide={false} indicators={false} className="rounded-t-lg">
-          <img
-            src={image}
-            alt="..."
-            className="object-cover aspect-[8/3] w-full rounded-t-lg"
-          />
-          <img
-            src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
-            alt="..."
-            className="object-cover aspect-[8/3] w-full rounded-t-lg"
-          />
-          <img
-            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-            alt="..."
-            className="object-cover aspect-[8/3] w-full rounded-t-lg"
-          />
-        </Carousel>
-      </div>
+      {generateImages(images)}
 
       <div className="px-6 p-2 flex flex-col space-y-0.5">
         <div className="flex justify-between items-center">
-          <p className="font-medium">{title}</p>
-          <p className="text-sm">
+          <p className="font-medium text-base">{title}</p>
+          <p className="text-xs">
             {checkInDate} - {checkOutDate}
           </p>
         </div>
@@ -89,7 +97,7 @@ export default function Post({
             wantNumOfNonBinary
           )}
         </p>
-        <p className="text-sm text-gray-500">{budget} /room /night</p>
+        <p className="text-sm text-gray-500 truncate">{budget} /room /night</p>
         <p className="text-sm truncate text-gray-500">{location}</p>
 
         <div className="grid place-items-center">
