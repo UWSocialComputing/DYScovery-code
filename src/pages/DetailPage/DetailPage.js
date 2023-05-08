@@ -12,7 +12,7 @@ function DetailPage() {
   var value = "hello";
 
   const handleChange = (event) => {
-    // setname(event.target.value);
+    console.log("hello");
   }
 
   return (
