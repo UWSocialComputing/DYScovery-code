@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Carousel } from "flowbite-react";
 
 const getGenderLabels = (numOfFemales, numOfMales, numOfNonBinary) => {
   const genderLabels = [];
@@ -52,11 +53,25 @@ export default function Post({
 
   return (
     <div className="w-64 my-3 bg-white shadow rounded-lg">
-      <img
-        src={image}
-        alt="some description"
-        className="object-cover aspect-[8/3] w-full rounded-t-lg"
-      />
+      <div className="h-24 rounded-t-lg">
+        <Carousel slide={false} indicators={false} className="rounded-t-lg">
+          <img
+            src={image}
+            alt="..."
+            className="object-cover aspect-[8/3] w-full rounded-t-lg"
+          />
+          <img
+            src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
+            alt="..."
+            className="object-cover aspect-[8/3] w-full rounded-t-lg"
+          />
+          <img
+            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            alt="..."
+            className="object-cover aspect-[8/3] w-full rounded-t-lg"
+          />
+        </Carousel>
+      </div>
 
       <div className="px-6 p-2 flex flex-col space-y-0.5">
         <div className="flex justify-between items-center">
