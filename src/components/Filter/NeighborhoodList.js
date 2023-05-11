@@ -4,6 +4,7 @@ function NeighborhoodList() {
     { id: "bellevue", label: "Bellevue" },
     { id: "university-district", label: "University District" },
     { id: "seatac-airport", label: "SeaTac Airport" },
+    { id: "any", label: "Any" },
   ];
 
   return (
