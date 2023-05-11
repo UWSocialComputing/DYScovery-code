@@ -8,7 +8,7 @@ const getGenderLabels = (numOfFemales, numOfMales, numOfNonBinary) => {
     genderLabels.push({
       count: numOfFemales,
       label: `${numOfFemales > 1 ? "females" : "female"}`,
-      color: "pink-500",
+      color: "pink",
     });
   }
 
@@ -16,7 +16,7 @@ const getGenderLabels = (numOfFemales, numOfMales, numOfNonBinary) => {
     genderLabels.push({
       count: numOfMales,
       label: `${numOfMales > 1 ? "males" : "male"}`,
-      color: "sky-500",
+      color: "blue",
     });
   }
 
@@ -24,16 +24,14 @@ const getGenderLabels = (numOfFemales, numOfMales, numOfNonBinary) => {
     genderLabels.push({
       count: numOfNonBinary,
       label: `${numOfNonBinary > 1 ? "people" : "person"}`,
-      color: "gray-500",
+      color: "gray",
     });
   }
 
   return genderLabels.map((gender) => (
     <span key={gender.label}>
       {gender.count}{" "}
-      <span className={`underline decoration-${gender.color}/60`}>
-        {gender.label}
-      </span>{" "}
+      <span className={`text-${gender.color}-700`}>{gender.label}</span>{" "}
     </span>
   ));
 };

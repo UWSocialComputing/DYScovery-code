@@ -1,6 +1,7 @@
 import * as React from "react";
 import Title from "../../components/Title/Title";
 import Posts from "../../components/Post/Posts";
+import Filter from "../../components/Filter/Filter";
 import { Link } from "react-router-dom";
 
 function ResultPage() {
@@ -14,7 +15,11 @@ function ResultPage() {
           </button>
         </Link>
       </div>
-      <Posts />
+
+      <div className="flex space-x-6">
+        <Filter />
+        <Posts />
+      </div>
     </div>
   );
 }
