@@ -1,5 +1,6 @@
 import * as React from "react";
-import DatePicker from "../DatePicker/DatePicker";
+import GroupSizePicker from "./GroupSizePicker";
+import NeighborhoodList from "./NeighborhoodList";
 
 function Filter() {
   return (
@@ -13,31 +14,15 @@ function Filter() {
 
       <div>
         <div class="grid grid-cols-1 gap-4 mt-4">
-          <select class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-            <option value="">Looking for group size</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-
+          <GroupSizePicker />
+          <NeighborhoodList />
           <div>
-            <label
-              for="Check-in Date"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Check-in Date
-            </label>
-            <DatePicker dateTitle="Check-in Date" showTitle={false} />
-          </div>
-
-          <div>
-            <label
-              for="Check-out Date"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Check-out Date
-            </label>
-            <DatePicker dateTitle="Check-out Date" showTitle={false} />
+            <select class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+              <option value="">Looking for group size</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
           </div>
         </div>
       </div>
