@@ -7,11 +7,11 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 function DetailPage() {
   const navigation = [
-    { name: 'About', href: '#', current: true },
-    { name: 'Preferences', href: '#', current: false },
-    { name: 'Neighborhood', href: '#', current: false },
-    { name: 'Reviews', href: '#', current: false },
-    { name: 'Social Media', href: '#', current: false}
+    { name: 'About', href: '#about', current: true },
+    { name: 'Preferences', href: '#pref', current: false },
+    { name: 'Neighborhood', href: '#neighborhood', current: false },
+    { name: 'Reviews', href: '#reviews', current: false },
+    { name: 'Social Media', href: '#social', current: false}
   ]
 
   function classNames(...classes) {
@@ -21,23 +21,28 @@ function DetailPage() {
   const details = [
     {
       name: 'About',
-      text: 'Insert about text here.',
+      href: 'about',
+      text: 'About About',
     },
     {
       name: 'Preferences',
+      href: 'pref',
       text: 'Insert about text here.'
     },
     {
       name: 'Neighborhood',
+      href: 'neighborhood',
       text: 'Insert about text here.'
     },
     {
       name: 'Reviews',
+      href: 'reviews',
       text: 'Insert about text here.'
     },
     {
       name: 'Social Media',
-      text: 'Insert about text here.'
+      text: 'Insert about text here.',
+      href: 'social'
     },
   ]
 
@@ -92,6 +97,7 @@ function DetailPage() {
                   </div>
                 </div>
               </div>
+              
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
@@ -229,7 +235,7 @@ function DetailPage() {
         <li key={detail.name} className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <div className="min-w-0 flex-auto">
-              <p className="text-sm font-semibold leading-6 text-gray-900">{detail.name}</p>
+              <p id={detail.href} className="text-sm font-semibold leading-6 text-gray-900">{detail.name}</p>
               <p className="mt-1 truncate text-xs leading-5 text-gray-500">{detail.text}</p>
             </div>
           </div>
@@ -237,7 +243,21 @@ function DetailPage() {
       ))}
     </ul>
 
+  <div class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-12">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+      <div class="max-w-xl lg:max-w-lg">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Interested in this listing?</h2>
+        <div class="mt-6 flex max-w-md gap-x-4">
+          <button type="submit" class="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Begin chat</button>
+        </div>
+      </div>
     </div>
+    </div>
+      <div class="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
+      </div>
+    </div>
+  </div>
   );
 }
 
