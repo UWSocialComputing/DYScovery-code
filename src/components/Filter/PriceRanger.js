@@ -22,7 +22,7 @@ const PriceRangeSlider = () => {
             ${values[0]}
           </div>
           <div className="text-gray-900 text-sm dark:text-white">
-            ${values[1]}
+            ${values[1] === 1000 ? values[1] + "+" : values[1]}
           </div>
         </div>
         <Slider
