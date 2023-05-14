@@ -1,24 +1,24 @@
-import * as React from "react";
+import React from "react";
 import GroupSizePicker from "./GroupSizePicker";
 import NeighborhoodList from "./NeighborhoodList";
 import PriceRanger from "./PriceRanger";
 import UserRatingSelector from "./UserRatingSelector";
-import RoomStatusSelector from "./RoomStatusSelector";
+import BookingStatusSelector from "./BookingStatusSelector";
 
-function Filter() {
+function Filter({ handleNeighborhoodListChange, handleBookingStatusChange }) {
   return (
-    <div class="w-full basis-1/3 shadow p-5 rounded-lg bg-white">
-      <div class="flex items-center justify-between mt-2">
-        <p class="text-xl">Filters</p>
+    <div className="w-full basis-1/3 shadow p-5 rounded-lg bg-white">
+      <div className="flex items-center justify-between mt-2">
+        <p className="text-xl">Filters</p>
       </div>
 
       <div>
-        <div class="grid grid-cols-1 gap-4 mt-4">
+        <div className="grid grid-cols-1 gap-4 mt-4">
           <GroupSizePicker />
-          <NeighborhoodList />
+          <NeighborhoodList onChange={handleNeighborhoodListChange} />
           <PriceRanger />
           <UserRatingSelector />
-          <RoomStatusSelector />
+          <BookingStatusSelector onChange={handleBookingStatusChange} />
         </div>
       </div>
     </div>

@@ -1,10 +1,23 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Title from "../../components/Title/Title";
 import Posts from "../../components/Post/Posts";
 import Filter from "../../components/Filter/Filter";
 import { Link } from "react-router-dom";
 
 function ResultPage() {
+  const [neighborhoodList, setNeighborhoodList] = useState([]);
+
+  const [bookingStatus, setBookingStatus] = useState([]);
+
+  // Handlers
+  const handleNeighborhoodListChange = (selectedStatus) => {
+    setNeighborhoodList(selectedStatus);
+  };
+
+  const handleBookingStatusChange = (selectedStatus) => {
+    setBookingStatus(selectedStatus);
+  };
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-8">
       <Title />
@@ -17,8 +30,14 @@ function ResultPage() {
       </div>
 
       <div className="flex space-x-6">
-        <Filter />
-        <Posts />
+        <Filter
+          handleNeighborhoodListChange={handleNeighborhoodListChange}
+          handleBookingStatusChange={handleBookingStatusChange}
+        />
+        <Posts
+          neighborhoodList={neighborhoodList}
+          bookingStatus={bookingStatus}
+        />
       </div>
     </div>
   );

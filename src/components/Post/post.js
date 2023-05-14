@@ -41,8 +41,9 @@ const generateImages = (images) => {
     return (
       <div className="h-32">
         <Carousel slide={false} indicators={false}>
-          {images.map((imageSrc) => (
+          {images.map((imageSrc, index) => (
             <img
+              key={index}
               src={imageSrc}
               alt="..."
               className="object-cover aspect-[2/1] w-full"

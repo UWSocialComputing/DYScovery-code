@@ -11,7 +11,8 @@
     "hasNumGenders": [2, 0, 0],
     "wantNumGenders": [2, 0, 0],
     "budget": "$150-$200",
-    "location": "Warwick Seattle, Downtown Seattle, wowww"
+    "location": "Warwick Seattle, Downtown Seattle",
+    "bookingStatus": "booked"
   },
   {
     "images": [
@@ -23,7 +24,8 @@
     "hasNumGenders": [1, 0, 0],
     "wantNumGenders": [1, 0, 0],
     "budget": "$300-$400",
-    "location": "The Ritz Carlton, Marina del Rey"
+    "location": "The Ritz Carlton, Marina del Rey",
+    "bookingStatus": "not-booked"
   },
   {
     "images": [
@@ -36,7 +38,8 @@
     "hasNumGenders": [0, 2, 0],
     "wantNumGenders": [0, 2, 0],
     "budget": "$200-$250",
-    "location": "Hotel Zephyr, San Francisco"
+    "location": "Hotel Zephyr, San Francisco",
+    "bookingStatus": "not-booked"
   },
   {
     "images": [
@@ -48,7 +51,8 @@
     "hasNumGenders": [1, 1, 0],
     "wantNumGenders": [1, 1, 0],
     "budget": "$500-$600",
-    "location": "Bardessono Hotel and Spa, Napa Valley"
+    "location": "Bardessono Hotel and Spa, Napa Valley",
+    "bookingStatus": "not-booked"
   },
   {
     "images": [
@@ -61,6 +65,7 @@
     "hasNumGenders": [0, 1, 0],
     "wantNumGenders": [0, 1, 0],
     "budget": "$800-$900",
-    "location": "Westin San Francisco Airport"
+    "location": "Westin San Francisco Airport",
+    "bookingStatus": "booked"
   }
 ]
