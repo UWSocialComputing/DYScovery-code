@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Title from "../../components/Title/Title";
 import DatePicker from "../../components/DatePicker/DatePicker";
 
+
 function NewPostPage() {
   const [eventName, setEventName] = useState("");
   const [checkInDate, setCheckInDate] = useState("");
@@ -18,13 +19,11 @@ function NewPostPage() {
     <div className="flex min-h-screen flex-col items-center justify-between p-8">
       <Title />
       <form onSubmit={handleSubmit} class="w-1/2 space-y-3">
+        <h1 class="text-xl font-bold dark:text-white">Basic Information</h1>
+
         <div>
-          <label
-            for="event name"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Event Name
-          </label>
+          <h2 for="event name"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Event Name</h2>
           <input
             type="text"
             id="event-name"
@@ -34,14 +33,15 @@ function NewPostPage() {
           />
         </div>
 
-        <div>
-          <label
-            for="Check-in Date"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Check-in Date
-          </label>
-          <DatePicker
+        
+        <div date-rangepicker class="flex items-center">
+          <h2 for="check-in/out dates"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Check-in/out Dates</h2>
+  <div class="relative">
+    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+         <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+    </div>
+    <DatePicker
             dateTitle="Check-in Date"
             showTitle={false}
             handleChange={(selectedDate) => {
@@ -49,16 +49,13 @@ function NewPostPage() {
               setCheckInDate(selectedDate);
             }}
           />
-        </div>
-
-        <div>
-          <label
-            for="Check-out Date"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Check-out Date
-          </label>
-          <DatePicker
+  </div>
+  <span class="mx-4 text-gray-500">to</span>
+  <div class="relative">
+    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+    </div>
+    <DatePicker
             dateTitle="Check-out Date"
             showTitle={false}
             handleChange={(selectedDate) => {
@@ -66,15 +63,13 @@ function NewPostPage() {
               setCheckOutDate(selectedDate);
             }}
           />
-        </div>
+</div>
+</div>
+
 
         <div>
-          <label
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            for="cover image"
-          >
-            Upload Cover Image(s)
-          </label>
+          <h2 for="cover image"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cover Image</h2>
           <input
             class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
             id="cover_image"
@@ -84,9 +79,18 @@ function NewPostPage() {
             class="mt-1 text-sm text-gray-500 dark:text-gray-300"
             id="user_avatar_help"
           >
-            A picture is useful to attract potential roommates
+            Upload an useful cover image to attract potential roommates!
           </div>
         </div>
+        
+
+
+        <h1 class="text-xl font-bold dark:text-white">Roommate Preference</h1>
+
+        <h1 class="text-xl font-bold dark:text-white">Hotel / Neighborhood</h1>
+
+
+
 
         <div>
           <label
