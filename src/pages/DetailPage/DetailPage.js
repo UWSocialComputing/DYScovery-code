@@ -3,6 +3,8 @@ import Title from "../../components/Title/Title";
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 
 function DetailPage() {
@@ -41,7 +43,7 @@ function DetailPage() {
     },
     {
       name: 'Social Media',
-      text: 'Insert about text here.',
+      text: '',
       href: 'social'
     },
   ]
@@ -231,16 +233,81 @@ function DetailPage() {
     </div>
 
     <ul role="list" className="divide-y divide-gray-100">
-      {details.map((detail) => (
-        <li key={detail.name} className="flex justify-between gap-x-6 py-5">
+      {/* About */}
+        <li key={details[0].name} className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <div className="min-w-0 flex-auto">
-              <p id={detail.href} className="text-sm font-semibold leading-6 text-gray-900">{detail.name}</p>
-              <p className="mt-1 truncate text-xs leading-5 text-gray-500">{detail.text}</p>
+              <p id={details[0].href} className="text-sm font-semibold leading-6 text-gray-900">{details[0].name}</p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">{details[0].text}</p>
             </div>
           </div>
         </li>
-      ))}
+
+        {/* Preferences */}
+        <li key={details[1].name} className="flex justify-between gap-x-6 py-5">
+          <div className="flex gap-x-4">
+            <div className="min-w-0 flex-auto">
+              <p id={details[1].href} className="text-sm font-semibold leading-6 text-gray-900">{details[1].name}</p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">{details[1].text}</p>
+            </div>
+          </div>
+        </li>
+
+        {/* Neighborhood */}
+        <li key={details[2].name} className="flex justify-between gap-x-6 py-5">
+          <div className="flex gap-x-4">
+            <div className="min-w-0 flex-auto">
+              <p id={details[2].href} className="text-sm font-semibold leading-6 text-gray-900">{details[2].name}</p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">{details[2].text}</p>
+            </div>
+          </div>
+        </li>
+
+        {/* Reviews */}
+        <li key={details[3].name} className="flex justify-between gap-x-6 py-5">
+          <div className="flex gap-x-4">
+            <div className="min-w-0 flex-auto">
+              <p id={details[3].href} className="text-sm font-semibold leading-6 text-gray-900">{details[3].name}</p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">{details[3].text}</p>
+            </div>
+          </div>
+        </li>
+
+        {/* Social media */}
+        <li key={details[4].name} className="flex justify-between gap-x-6 py-5">
+          <div className="flex gap-x-4">
+            <div className="min-w-0 flex-auto">
+              <p id={details[4].href} className="text-sm font-semibold leading-6 text-gray-900">{details[4].name}</p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">{details[4].text}</p>
+              
+              <div class="grid grid-cols-4 gap-4">
+              <a href="https://www.instagram.com">
+              <button id="instagram" href="instagram.com" class=" border-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white bg-white text-pink-600 w-12 h-12  transform hover:-translate-y-3 rounded-full duration-500 ">
+              <FontAwesomeIcon icon={icon({name: 'instagram', style: 'brands'})} />
+              </button>
+              </a>
+
+              <a href="https://www.twitter.com">
+              <button id="twitter" class="bg-white  transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white text-2xl">
+              <FontAwesomeIcon icon={icon({name: 'twitter', style: 'brands'})} />
+              </button>
+              </a>
+
+              <a href="https://www.discord.com">
+              <button id="discord" class="bg-white transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 text-indigo-500 border-indigo-500 hover:bg-indigo-500 hover:text-white text-2xl">
+              <FontAwesomeIcon icon={icon({name: 'discord', style: 'brands'})} />
+              </button>
+              </a>
+
+              <a href="https://www.spotify.com">
+              <button id="spotify" class="bg-white transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 text-green-500 border-green-500 hover:bg-green-500 hover:text-white text-2xl">
+              <FontAwesomeIcon icon={icon({name: 'spotify', style: 'brands'})} />
+              </button>
+              </a>
+              </div>
+            </div>
+          </div>
+        </li>
     </ul>
 
   <div class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-12">
