@@ -1,8 +1,20 @@
-function GroupSizePicker() {
+import React, { useState } from "react";
+
+function GroupSizePicker({ onChange }) {
+  const [groupSize, setGroupSize] = useState("");
+
+  const handleGroupSizeChange = (event) => {
+    const newSize = event.target.value;
+    if ((newSize >= 1 && newSize <= 7) || newSize == "") {
+      setGroupSize(newSize);
+      onChange(newSize); // Pass the new value to the parent component
+    }
+  };
+
   return (
     <div>
       <label
-        htmlFor="Need Group Size"
+        htmlFor="NeedGroupSize"
         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
       >
         Looking for group size
@@ -13,6 +25,8 @@ function GroupSizePicker() {
         id="NeedGroupSize"
         min="1"
         max="7"
+        value={groupSize}
+        onChange={handleGroupSizeChange}
       />
     </div>
   );

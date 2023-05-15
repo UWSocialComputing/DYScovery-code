@@ -5,19 +5,25 @@ import PriceRanger from "./PriceRanger";
 import UserRatingSelector from "./UserRatingSelector";
 import BookingStatusSelector from "./BookingStatusSelector";
 
-function Filter({ handleNeighborhoodListChange, handleBookingStatusChange }) {
+function Filter({
+  handleGroupSizeChange,
+  handleNeighborhoodListChange,
+  handlePriceRangeChange,
+  handleUserRatingChange,
+  handleBookingStatusChange,
+}) {
   return (
-    <div className="w-full basis-1/3 shadow p-5 rounded-lg bg-white">
+    <div className="shadow p-5 rounded-lg bg-white">
       <div className="flex items-center justify-between mt-2">
-        <p className="text-xl">Filters</p>
+        <p className="text-xl">Filter by</p>
       </div>
 
       <div>
         <div className="grid grid-cols-1 gap-4 mt-4">
-          <GroupSizePicker />
+          <GroupSizePicker onChange={handleGroupSizeChange} />
           <NeighborhoodList onChange={handleNeighborhoodListChange} />
-          <PriceRanger />
-          <UserRatingSelector />
+          <PriceRanger onChange={handlePriceRangeChange} />
+          <UserRatingSelector onChange={handleUserRatingChange} />
           <BookingStatusSelector onChange={handleBookingStatusChange} />
         </div>
       </div>

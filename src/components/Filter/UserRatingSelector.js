@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
-const UserRatingSelector = () => {
+const UserRatingSelector = ({ onChange }) => {
+  const [selectedRating, setSelectedRating] = useState("0");
+
+  const handleRatingChange = (event) => {
+    const ratingValue = event.target.value;
+    setSelectedRating(ratingValue);
+    onChange(ratingValue); // Pass the selected rating to the parent component
+  };
+
   const ratingOptions = [
     { id: "guest-rating-option-1", value: "0", label: "Any" },
     { id: "guest-rating-option-2", value: "5", label: "5" },
@@ -24,7 +32,8 @@ const UserRatingSelector = () => {
             name="guest-rating"
             value={option.value}
             className="mr-2"
-            defaultChecked={option.value === "0"}
+            checked={selectedRating === option.value}
+            onChange={handleRatingChange}
           />
           <label
             htmlFor={option.id}
