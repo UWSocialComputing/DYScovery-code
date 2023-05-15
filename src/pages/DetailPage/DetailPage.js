@@ -9,7 +9,8 @@ import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 function DetailPage() {
   const navigation = [
-    { name: 'About', href: '#about', current: true },
+    { name: 'General', href: '#general', current: true },
+    { name: 'About', href: '#about', current: false },
     { name: 'Preferences', href: '#pref', current: false },
     { name: 'Neighborhood', href: '#neighborhood', current: false },
     { name: 'Reviews', href: '#reviews', current: false },
@@ -22,24 +23,42 @@ function DetailPage() {
 
   const details = [
     {
+      name: 'General',
+      href: 'general',
+      text: <p>
+      Event: DYS Concert<br></br>
+      Check-in: 4/28/23<br></br>
+      Check-out: 4/29/23<br></br>
+      We are: 2 females<br></br>
+      Looking for: 2 females<br></br>
+      Budget: $150-$300 per day
+      </p>
+    },
+    {
       name: 'About',
       href: 'about',
-      text: 'About About',
+      text: <p>
+        We are college students and fans of DYS! We have already purchased tickets for the concert.
+        </p>
     },
     {
       name: 'Preferences',
       href: 'pref',
-      text: 'Insert about text here.'
+      text: <p>
+        We prefer you are also attending the DYS concert and in college. Looking for easygoing roommates who won't make noise after 1am. If you're interested in travelling around Seattle together, let us know.
+      </p>
     },
     {
       name: 'Neighborhood',
       href: 'neighborhood',
-      text: 'Insert about text here.'
+      text: '',
     },
     {
       name: 'Reviews',
       href: 'reviews',
-      text: 'Insert about text here.'
+      text: <p>
+        TODO
+      </p>
     },
     {
       name: 'Social Media',
@@ -116,7 +135,7 @@ function DetailPage() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src="https://images.unsplash.com/photo-1612000529646-f424a2aa1bff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                         alt=""
                       />
                     </Menu.Button>
@@ -233,7 +252,7 @@ function DetailPage() {
     </div>
 
     <ul role="list" className="divide-y divide-gray-100">
-      {/* About */}
+      {/* General */}
         <li key={details[0].name} className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <div className="min-w-0 flex-auto">
@@ -243,7 +262,7 @@ function DetailPage() {
           </div>
         </li>
 
-        {/* Preferences */}
+        {/* About */}
         <li key={details[1].name} className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <div className="min-w-0 flex-auto">
@@ -253,7 +272,7 @@ function DetailPage() {
           </div>
         </li>
 
-        {/* Neighborhood */}
+        {/* Preferences */}
         <li key={details[2].name} className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <div className="min-w-0 flex-auto">
@@ -263,22 +282,37 @@ function DetailPage() {
           </div>
         </li>
 
-        {/* Reviews */}
+        {/* Neighborhood */}
         <li key={details[3].name} className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <div className="min-w-0 flex-auto">
               <p id={details[3].href} className="text-sm font-semibold leading-6 text-gray-900">{details[3].name}</p>
               <p className="mt-1 truncate text-xs leading-5 text-gray-500">{details[3].text}</p>
+              <section class="text-gray-600 body-font relative">
+                <div class="min-w-0 flex-auto">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.6239399290803!2d-122.34340762350878!3d47.61400158746624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490154b7e336c5b%3A0x202a343f203ca321!2sWarwick%20Seattle!5e0!3m2!1sen!2sus!4v1684178350536!5m2!1sen!2sus" width="800" height="650" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </section>
             </div>
           </div>
         </li>
 
-        {/* Social media */}
+        {/* Reviews */}
         <li key={details[4].name} className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <div className="min-w-0 flex-auto">
               <p id={details[4].href} className="text-sm font-semibold leading-6 text-gray-900">{details[4].name}</p>
               <p className="mt-1 truncate text-xs leading-5 text-gray-500">{details[4].text}</p>
+            </div>
+          </div>
+        </li>
+
+        {/* Social media */}
+        <li key={details[5].name} className="flex justify-between gap-x-6 py-5">
+          <div className="flex gap-x-4">
+            <div className="min-w-0 flex-auto">
+              <p id={details[5].href} className="text-sm font-semibold leading-6 text-gray-900">{details[5].name}</p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">{details[5].text}</p>
               
               <div class="grid grid-cols-4 gap-4">
               <a href="https://www.instagram.com">
