@@ -105,11 +105,57 @@ function NewPostPage() {
             Upload an useful cover image to attract potential roommates!
           </div>
         </div>
-        
-        <h1 class="text-xl font-bold dark:text-white">About You</h1>
+
+        <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+        <h1 class="text-xl font-bold dark:text-white">Roommate Preference</h1>
         <div>
-        <h2 for="cover image"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">TODO</h2>
+        <h2 for="roommate preference"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">We are Looking for Roommates Who</h2>
+          <textarea
+            id="roommate_preferences"
+            rows="4"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Enter your specific preferences for prospective roommates (sleeping habits, etc.)..."
+          ></textarea>
+        </div>
+
+        <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+        <h1 class="text-xl font-bold dark:text-white">Hotel / Neighborhood</h1>
+        <h2 
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Hotel Searching Status</h2>
+      
+        <div class="grid gap-6 md:grid-cols-3">
+        <div class="flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 mr-4">
+          <input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+          <label for="bordered-radio-1" class="w-full py-4 ml-2 text-xs font-medium text-gray-900 dark:text-gray-300">We already booked a place </label>
+        </div>
+        <div class="inline-flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 mr-4">
+          <input id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+          <label for="bordered-radio-2" class="w-full py-4 ml-2 text-xs font-medium text-gray-900 dark:text-gray-300">We haven't booked a place,{'\n'} but have some preference</label>
+        </div>
+        <div class="inline-flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 mr-4">
+          <input id="bordered-radio-3" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+          <label for="bordered-radio-3" class="w-full py-4 ml-2 text-xs font-medium text-gray-900 dark:text-gray-300">We prefer searching with future roommates together</label>
+        </div>
+        </div>
+
+        <div>
+        <h2 for="hotel preference"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Hotel Information</h2>
+          <textarea
+            id="hotel_preferences"
+            rows="4"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Enter your specific preferences for (prospective) place to stay (location, neighborhood, etc.)..."
+          ></textarea>
+        </div>
+
+        <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+        <h1 class="text-xl font-bold dark:text-white">About You</h1>
+
+        <div>
+        <h2 for="about_you"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Self-introduction</h2>
           <textarea
             id="about_you"
             rows="4"
@@ -117,29 +163,19 @@ function NewPostPage() {
             placeholder="Tell others more about you (fandom, hobbies, etc.)..."
           ></textarea>
         </div>
-        <h1 class="text-xl font-bold dark:text-white">Roommate Preference</h1>
-
-        <h1 class="text-xl font-bold dark:text-white">Hotel / Neighborhood</h1>
-
-
-
-
 
 
         <div>
-          <label
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            for="preferences"
-          >
-            Other Preferences
-          </label>
+        <h2 for="additional_info"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Additional Information</h2>
           <textarea
-            id="preferences"
+            id="additional_info"
             rows="4"
             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Some specific preferences (location, sleeping habits, etc.)..."
+            placeholder="What else would you like others to know?"
           ></textarea>
         </div>
+
 
         <div className="grid place-items-center">
           <button
