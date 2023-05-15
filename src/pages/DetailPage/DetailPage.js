@@ -207,6 +207,9 @@ function DetailPage() {
       )}
     </Disclosure>
 
+
+<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"><span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">Ella</span> and <span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">Rory</span> : DYS Concert</h1>
+
     <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
       <div
         className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
