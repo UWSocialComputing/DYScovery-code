@@ -56,9 +56,7 @@ function DetailPage() {
     {
       name: 'Reviews',
       href: 'reviews',
-      text: <p>
-        TODO
-      </p>
+      text: '',
     },
     {
       name: 'Social Media',
@@ -304,6 +302,49 @@ function DetailPage() {
               <p id={details[4].href} className="text-sm font-semibold leading-6 text-gray-900">{details[4].name}</p>
               <p className="mt-1 truncate text-xs leading-5 text-gray-500">{details[4].text}</p>
             </div>
+
+            <div class="flex items-center mb-5">
+                <p class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800">4.8</p>
+                <p class="ml-2 font-medium text-gray-900 dark:text-white">Excellent</p>
+                <span class="w-1 h-1 mx-2 bg-gray-900 rounded-full dark:bg-gray-500"></span>
+                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">6 reviews</p>
+            </div>
+            <br></br>
+            <div class="flex items-center mb-5">
+                <a href="#" class="ml-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Read all reviews</a>
+            </div>
+            <div class="gap-8 sm:grid sm:grid-cols-2">
+                <div>
+                    <dl>
+                        <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Overall</dt>
+                        <dd class="flex items-center mb-3">
+                            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+                                <div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style={{width: "98%"}}></div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4.8</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Cleanliness</dt>
+                        <dd class="flex items-center mb-3">
+                            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+                                <div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style={{width: "100%"}}></div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">5.0</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Reliability</dt>
+                        <dd class="flex items-center mb-3">
+                            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+                                <div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style={{width: "90%"}}></div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4.5</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
           </div>
         </li>
 
