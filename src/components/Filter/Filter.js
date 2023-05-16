@@ -4,6 +4,7 @@ import NeighborhoodList from "./NeighborhoodList";
 import PriceRanger from "./PriceRanger";
 import UserRatingSelector from "./UserRatingSelector";
 import BookingStatusSelector from "./BookingStatusSelector";
+import DatePicker from "../DatePicker/DatePicker";
 
 function Filter({
   handleGroupSizeChange,
@@ -20,6 +21,8 @@ function Filter({
 
       <div>
         <div className="grid grid-cols-1 gap-4 mt-4">
+          <DatePicker dateTitle={"Check-in Date"} />
+          <DatePicker dateTitle={"Check-out Date"} />
           <GroupSizePicker onChange={handleGroupSizeChange} />
           <NeighborhoodList onChange={handleNeighborhoodListChange} />
           <PriceRanger onChange={handlePriceRangeChange} />

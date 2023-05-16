@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Title from "../../components/Title/Title";
 import Posts from "../../components/Post/Posts";
 import Filter from "../../components/Filter/Filter";
-import { Link } from "react-router-dom";
+import ResultPageTopBar from "../../components/ResultPageTopBar/ResultPageTopBar";
 
 function ResultPage() {
   const [groupSize, setGroupSize] = useState("");
@@ -34,15 +33,7 @@ function ResultPage() {
 
   return (
     <div className="min-h-screen items-center justify-between p-8">
-      <Title />
-      <div className="grid place-items-center">
-        <Link to="/DYScovery-code/postnew">
-          <button className="mt-2 px-6 py-1 bg-cyan-500 hover:bg-cyan-700 text-white font-bold rounded-lg">
-            Make a New Post
-          </button>
-        </Link>
-      </div>
-
+      <ResultPageTopBar />
       <div className="w-full grid grid-cols-4 gap-6">
         <div className="col-span-1">
           <Filter

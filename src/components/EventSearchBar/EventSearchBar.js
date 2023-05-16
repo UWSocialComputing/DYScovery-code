@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function EventSearchBar({ showSearchBtn = true }) {
   return (
-    <div className="w-full my-3">
+    <div className="">
       <form>
         <label
           htmlFor="default-search"

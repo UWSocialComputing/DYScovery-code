@@ -62,7 +62,7 @@ export default function Posts({
   });
 
   // Apply the showPartial flag and render the filtered posts
-  const renderedPosts = showPartial ? filteredPosts.slice(0, 3) : filteredPosts;
+  const renderedPosts = showPartial ? postsData.slice(0, 3) : filteredPosts;
 
   if (renderedPosts.length > 1) {
     return (

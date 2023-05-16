@@ -24,7 +24,6 @@ function NeighborhoodList({ onChange }) {
       value: "Downtown Seattle",
       label: "Downtown Seattle",
     },
-    { id: "bellevue", value: "Bellevue", label: "Bellevue" },
     {
       id: "university-district",
       value: "University District",

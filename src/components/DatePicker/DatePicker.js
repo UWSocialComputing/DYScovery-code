@@ -19,7 +19,14 @@ export default function DatePicker({
 
   return (
     <div>
-      {showTitle && <h1 className="text-xs text-grey-300">{dateTitle}</h1>}
+      {showTitle && (
+        <label
+          htmlFor="NeedGroupSize"
+          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >
+          {dateTitle}
+        </label>
+      )}
       <Datepicker
         options={options}
         onChange={handleChange}
