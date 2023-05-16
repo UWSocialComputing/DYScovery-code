@@ -21,17 +21,16 @@ function NeighborhoodList({ onChange }) {
   const neighborhoods = [
     {
       id: "downtown-seattle",
-      value: "downtown-seattle",
+      value: "Downtown Seattle",
       label: "Downtown Seattle",
     },
-    { id: "bellevue", value: "bellevue", label: "Bellevue" },
     {
       id: "university-district",
-      value: "university-district",
+      value: "University District",
       label: "University District",
     },
-    { id: "seatac-airport", value: "seatac-airport", label: "SeaTac Airport" },
-    { id: "any", value: "", label: "Any" },
+    { id: "seatac-airport", value: "SeaTac Airport", label: "SeaTac Airport" },
+    { id: "tacoma", value: "Tacoma", label: "Tacoma" },
   ];
 
   return (
