@@ -34,7 +34,7 @@
   },
   {
     "images": [
-      "https://dailytargum.imgix.net/images/5f30357c-1106-4e43-9a0c-2690a5fa7583.jpeg"
+      "https://images.trvl-media.com/lodging/6000000/5390000/5388900/5388888/c29c3df0.jpg?impolicy=resizecrop&rw=1200&ra=fit"
     ],
     "event": "Twice 'Ready To Be'",
     "checkInDate": "6/14",
@@ -42,8 +42,8 @@
     "hasNumGenders": [1, 0, 0],
     "wantNumGenders": [1, 0, 0],
     "groupSize": 1,
-    "hotel": "",
-    "neighborhoodList": ["Downtown Seattle", "SeaTac Airport"],
+    "hotel": "Holiday Inn Express & Suites Tacoma Downtown, an IHG Hotel",
+    "neighborhoodList": ["Tacoma"],
     "priceRange": [200, 300],
     "userRating": 5.0,
     "bookingStatus": "booked"
@@ -100,6 +100,22 @@
   },
   {
     "images": [
+      "https://www.kayak.com/rimg/himg/c7/6b/33/ice-76913-79835805_3XL-355292.jpg?width=720&height=576&crop=true"
+    ],
+    "event": "Twice 'Ready To Be'",
+    "checkInDate": "6/14",
+    "checkOutDate": "6/17",
+    "hasNumGenders": [1, 0, 0],
+    "wantNumGenders": [1, 0, 0],
+    "groupSize": 1,
+    "hotel": "La Quinta Inn & Suites",
+    "neighborhoodList": ["Tacoma"],
+    "priceRange": [200, 300],
+    "userRating": 5.0,
+    "bookingStatus": "booked"
+  },
+  {
+    "images": [
       "https://www.allkpop.com/upload/2022/08/content/041116/1659626214-untitled-1.jpg"
     ],
     "event": "Twice 'Ready To Be'",
@@ -112,6 +128,54 @@
     "neighborhoodList": ["Downtown Seattle", "SeaTac Airport"],
     "priceRange": [200, 300],
     "userRating": 5.0,
+    "bookingStatus": "not-booked"
+  },
+  {
+    "images": [
+      "https://www.apple.com/newsroom/images/product/music/standard/Apple-Music-Live-Ed-Sheeran-with-guitar_big.jpg.large.jpg"
+    ],
+    "event": "Ed Sheeran Tour",
+    "checkInDate": "8/24",
+    "checkOutDate": "8/27",
+    "hasNumGenders": [3, 0, 0],
+    "wantNumGenders": [1, 0, 0],
+    "groupSize": 3,
+    "hotel": "",
+    "neighborhoodList": ["Downtown Seattle"],
+    "priceRange": [200, 300],
+    "userRating": 4.8,
+    "bookingStatus": "not-booked"
+  },
+  {
+    "images": [
+      "https://media.npr.org/assets/img/2014/06/26/ed_sheeran_pub1_credit_ben_watts-53f939ba8a80e6fb1480a527e26e3fe68550f7f6-s1100-c50.jpg"
+    ],
+    "event": "Ed Sheeran Tour",
+    "checkInDate": "8/24",
+    "checkOutDate": "8/26",
+    "hasNumGenders": [2, 0, 0],
+    "wantNumGenders": [2, 0, 0],
+    "groupSize": 2,
+    "hotel": "",
+    "neighborhoodList": ["Downtown Seattle", "University District"],
+    "priceRange": [200, 300],
+    "userRating": 3.8,
+    "bookingStatus": "not-booked"
+  },
+  {
+    "images": [
+      "https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2019/02/21/1152/Hyatt-Regency-Seattle-P081-King-Alki-View.jpg/Hyatt-Regency-Seattle-P081-King-Alki-View.16x9.jpg?imwidth=1920"
+    ],
+    "event": "Ed Sheeran Tour",
+    "checkInDate": "8/24",
+    "checkOutDate": "8/28",
+    "hasNumGenders": [0, 2, 0],
+    "wantNumGenders": [0, 2, 0],
+    "groupSize": 2,
+    "hotel": "Hyatt Regency Seattle",
+    "neighborhoodList": ["Downtown Seattle"],
+    "priceRange": [150, 250],
+    "userRating": 4.5,
     "bookingStatus": "booked"
   }
 ]

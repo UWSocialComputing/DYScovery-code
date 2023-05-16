@@ -84,8 +84,9 @@ export default function Posts({
 
   // Apply the showPartial flag and render the filtered posts
   const renderedPosts = showPartial ? postsData.slice(0, 3) : filteredPosts;
+  renderedPosts.sort(() => Math.random() - 0.5);
 
-  if (renderedPosts.length > 1) {
+  if (renderedPosts.length >= 1) {
     return (
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {renderedPosts.map((post, index) => (
