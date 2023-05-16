@@ -7,6 +7,8 @@ import BookingStatusSelector from "./BookingStatusSelector";
 import DatePicker from "../DatePicker/DatePicker";
 
 function Filter({
+  handleCheckInDateChange,
+  handleCheckOutDateChange,
   handleGroupSizeChange,
   handleNeighborhoodListChange,
   handlePriceRangeChange,
@@ -21,8 +23,16 @@ function Filter({
 
       <div>
         <div className="grid grid-cols-1 gap-4 mt-4">
-          <DatePicker dateTitle={"Check-in Date"} />
-          <DatePicker dateTitle={"Check-out Date"} />
+          <DatePicker
+            dateTitle={"Check-in Date"}
+            onChange={handleCheckInDateChange}
+            isStart={true}
+          />
+          <DatePicker
+            dateTitle={"Check-out Date"}
+            onChange={handleCheckOutDateChange}
+            isStart={false}
+          />
           <GroupSizePicker onChange={handleGroupSizeChange} />
           <NeighborhoodList onChange={handleNeighborhoodListChange} />
           <PriceRanger onChange={handlePriceRangeChange} />

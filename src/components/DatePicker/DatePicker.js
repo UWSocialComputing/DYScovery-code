@@ -4,10 +4,16 @@ import Datepicker from "tailwind-datepicker-react";
 
 export default function DatePicker({
   dateTitle,
-  handleChange,
+  onChange,
   showTitle = true,
+  isStart = true,
 }) {
   const [show, setShow] = useState(false);
+
+  const handleChange = (selectedDate) => {
+    console.log("new date: " + selectedDate);
+    onChange(selectedDate);
+  };
 
   const handleClose = (state) => {
     setShow(state);
@@ -15,6 +21,7 @@ export default function DatePicker({
 
   const options = {
     title: dateTitle,
+    defaultDate: isStart ? new Date("2023-01-01") : new Date("2023-12-31"),
   };
 
   return (

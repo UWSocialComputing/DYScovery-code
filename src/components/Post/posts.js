@@ -2,8 +2,17 @@ import React from "react";
 import Post from "./Post";
 import postsData from "../../data/posts.json";
 
+// Function to create Date object from "MM/DD" formatted date string
+function createDateObject(dateString) {
+  const [month, day] = dateString.split("/");
+  return new Date(new Date().getFullYear(), month - 1, day);
+}
+
 export default function Posts({
   showPartial = false,
+  searchQuery,
+  checkInDate,
+  checkOutDate,
   groupSize,
   neighborhoodList = [],
   priceRange,
@@ -12,20 +21,37 @@ export default function Posts({
 }) {
   // Filter posts based on multiple criteria
   const filteredPosts = postsData.filter((post) => {
+    // Check if the post's event contains the search value
+    if (
+      searchQuery &&
+      !post.event.toLowerCase().includes(searchQuery.toLowerCase())
+    ) {
+      return false;
+    }
+
+    // Convert checkInDate and checkOutDate from "6/14" format to Date objects
+    const postCheckInDate = createDateObject(post.checkInDate);
+    const postCheckOutDate = createDateObject(post.checkOutDate);
+
+    // Compare the dates with checkInDate and checkOutDate
+    if (
+      checkInDate > checkOutDate || // Invalid date range
+      postCheckInDate < checkInDate || // Post check-in is before desired check-in
+      postCheckOutDate > checkOutDate // Post check-out is after desired check-out
+    ) {
+      return false; // Exclude the post from the filtered result
+    }
+
     // Check if the post's booking status matches any selected booking status
     if (
       bookingStatus.length > 0 &&
       !bookingStatus.includes(post.bookingStatus)
     ) {
-      console.log(
-        `Filtered out post due to booking status: ${post.bookingStatus}`
-      );
       return false;
     }
 
     // Check if the group size matches
     if (groupSize !== "" && parseInt(post.groupSize) !== parseInt(groupSize)) {
-      console.log(`Filtered out post due to group size: ${post.groupSize}`);
       return false;
     }
 
@@ -36,9 +62,6 @@ export default function Posts({
         post.neighborhoodList.includes(neighborhood)
       )
     ) {
-      console.log(
-        `Filtered out post due to neighborhood list: ${post.neighborhoodList}`
-      );
       return false;
     }
 
@@ -47,13 +70,11 @@ export default function Posts({
       priceRange !== undefined &&
       (post.priceRange[0] < priceRange[0] || post.priceRange[1] > priceRange[1])
     ) {
-      console.log(`Filtered out post due to price range: ${post.priceRange}`);
       return false;
     }
 
     // Check if the post's user rating is above the selected rating
     if (userRating !== undefined && post.userRating < userRating) {
-      console.log(`Filtered out post due to user rating: ${post.userRating}`);
       return false;
     }
 
