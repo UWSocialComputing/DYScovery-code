@@ -82,10 +82,10 @@ export default function Post({
   const [wantNumOfFemales, wantNumOfMales, wantNumOfNonBinary] = wantNumGenders;
 
   return (
-    <Link to="/DYScovery-code/details">
-      <div className="w-72 bg-white shadow rounded-lg hover:shadow-cyan-500/50 hover:shadow-lg">
-        {generateImages(images)}
+    <div className="w-72 bg-white shadow rounded-lg hover:shadow-cyan-500/50 hover:shadow-lg">
+      {generateImages(images)}
 
+      <Link to="/DYScovery-code/details">
         <div className="px-6 p-2 flex flex-col space-y-0.5">
           <div className="flex justify-between items-center">
             <p className="font-medium text-base truncate">{event}</p>
@@ -109,7 +109,7 @@ export default function Post({
             {hotel === "" ? neighborhoodList.join(", ") : hotel}
           </p>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
