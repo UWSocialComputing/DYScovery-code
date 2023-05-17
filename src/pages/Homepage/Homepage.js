@@ -2,14 +2,28 @@ import * as React from "react";
 import Title from "../../components/Title/Title";
 import EventSearchBar from "../../components/EventSearchBar/EventSearchBar";
 import Posts from "../../components/Post/Posts";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
-    <div className="min-h-screen mx-32 py-3 flex flex-col justify-between">
+    <div className="min-h-screen mx-32 py-8 flex flex-col justify-between">
       <Title showTag={true} />
-      <EventSearchBar />
+      <div className="grid grid-cols-4">
+        <div className="col-span-3">
+          <EventSearchBar />
+        </div>
+        <div className="col-span-1 flex justify-center">
+          <div className="grid place-items-center">
+            <Link to="/DYScovery-code/postnew">
+              <button className="text-white bg-cyan-500 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <span className="font-bold">Make a New Post</span>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
       <div className="self-start text-xl font-semibold">Explore...</div>
-      <Posts showPartial={true} />
+      <Posts showPartial={true} isClickable={false} />
     </div>
   );
 }

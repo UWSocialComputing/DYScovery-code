@@ -18,6 +18,7 @@ export default function Posts({
   priceRange,
   userRating,
   bookingStatus = [],
+  isClickable = false,
 }) {
   // Filter posts based on multiple criteria
   const filteredPosts = postsData.filter((post) => {
@@ -90,7 +91,7 @@ export default function Posts({
     return (
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {renderedPosts.map((post, index) => (
-          <Post key={index} {...post} />
+          <Post key={index} {...post} isClickable={isClickable} />
         ))}
       </div>
     );

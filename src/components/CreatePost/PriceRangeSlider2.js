@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Slider } from "@mui/material";
 
-const PriceRangeSlider2 = () => {
-  const [values, setValues] = useState([150, 300]);
+const PriceRangeSlider2 = ({ onChange }) => {
+  const [values, setValues] = useState([0, 1000]);
 
   const handleChange = (event, newValues) => {
     setValues(newValues);
+    onChange(newValues); // Pass the new values to the parent component
   };
 
   return (

@@ -70,6 +70,7 @@ function ResultPage() {
             priceRange={priceRange}
             userRating={userRating}
             bookingStatus={bookingStatus}
+            isClickable={true}
           />
         </div>
       </div>

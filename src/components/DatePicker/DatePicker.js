@@ -21,7 +21,7 @@ export default function DatePicker({
 
   const options = {
     title: dateTitle,
-    defaultDate: isStart ? new Date("2023-01-01") : new Date("2023-12-31"),
+    defaultDate: isStart ? new Date("2023-01-02") : new Date("2023-12-31"),
   };
 
   return (

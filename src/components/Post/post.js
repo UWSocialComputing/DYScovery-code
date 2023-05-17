@@ -77,39 +77,54 @@ export default function Post({
   priceRange,
   hotel,
   neighborhoodList,
+  isClickable = false,
 }) {
   const [hasNumOfFemales, hasNumOfMales, hasNumOfNonBinary] = hasNumGenders;
   const [wantNumOfFemales, wantNumOfMales, wantNumOfNonBinary] = wantNumGenders;
 
-  return (
-    <div className="w-72 bg-white shadow rounded-lg hover:shadow-cyan-500/50 hover:shadow-lg">
-      {generateImages(images)}
-
-      <Link to="/DYScovery-code/details">
-        <div className="px-6 p-2 flex flex-col space-y-0.5">
-          <div className="flex justify-between items-center">
-            <p className="font-medium text-base truncate">{event}</p>
-            <p className="text-xs">
-              {checkInDate} - {checkOutDate}
-            </p>
-          </div>
-          <p className="text-sm truncate">
-            {getGenderLabels(hasNumOfFemales, hasNumOfMales, hasNumOfNonBinary)}{" "}
-            wants{" "}
-            {getGenderLabels(
-              wantNumOfFemales,
-              wantNumOfMales,
-              wantNumOfNonBinary
-            )}
-          </p>
-          <p className="text-sm text-gray-500 truncate">
-            ${priceRange[0]}-${priceRange[1]} /room /night
-          </p>
-          <p className="text-sm truncate text-gray-500">
-            {hotel === "" ? neighborhoodList.join(", ") : hotel}
+  function PostContent() {
+    return (
+      <div className="px-6 p-2 flex flex-col space-y-0.5">
+        <div className="flex justify-between items-center">
+          <p className="font-medium text-base truncate">{event}</p>
+          <p className="text-xs">
+            {checkInDate} - {checkOutDate}
           </p>
         </div>
-      </Link>
+        <p className="text-sm truncate">
+          {getGenderLabels(hasNumOfFemales, hasNumOfMales, hasNumOfNonBinary)}{" "}
+          wants{" "}
+          {getGenderLabels(
+            wantNumOfFemales,
+            wantNumOfMales,
+            wantNumOfNonBinary
+          )}
+        </p>
+        <p className="text-sm text-gray-500 truncate">
+          ${priceRange[0]}-${priceRange[1]} /room /night
+        </p>
+        <p className="text-sm truncate text-gray-500">
+          {hotel === "" ? neighborhoodList.join(", ") : hotel}
+        </p>
+      </div>
+    );
+  }
+
+  if (isClickable) {
+    return (
+      <div className="w-72 bg-white shadow rounded-lg hover:shadow-cyan-500/50 hover:shadow-lg">
+        {generateImages(images)}
+        <Link to="/DYScovery-code/details">
+          <PostContent />
+        </Link>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-72 bg-white shadow rounded-lg">
+      {generateImages(images)}
+      <PostContent />
     </div>
   );
 }

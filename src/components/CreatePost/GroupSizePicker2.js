@@ -1,16 +1,28 @@
-function GroupSizePicker2({ gender }) {
+import React, { useState } from "react";
+
+function GroupSizePicker2({ gender, onChange }) {
+  const [groupSize, setGroupSize] = useState("");
+
+  const handleGroupSizeChange = (event) => {
+    const newSize = event.target.value;
+    if ((newSize >= 1 && newSize <= 7) || newSize == "") {
+      setGroupSize(newSize);
+      onChange(newSize); // Pass the new value to the parent component
+    }
+  };
+
   return (
-    <div className="inline-block mr-2">
-      <select
-        id="size_picker"
-        className="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      >
-        <option selected># of {gender}(s)</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4+</option>
-      </select>
+    <div className="w-full">
+      <input
+        type="number"
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        id="NeedGroupSize"
+        min="1"
+        max="7"
+        value={groupSize}
+        onChange={handleGroupSizeChange}
+        placeholder={"Number of " + gender}
+      />
     </div>
   );
 }
