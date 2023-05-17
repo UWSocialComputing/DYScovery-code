@@ -16,7 +16,9 @@ function DetailPage() {
           <ReviewInfo />
         </div>
         <div className="col-span-1">
-          <InterestCard />
+          <div className="sticky top-20">
+            <InterestCard />
+          </div>
         </div>
       </div>
     </div>
