@@ -3,8 +3,12 @@ import NewPostPageTopBar from "../../components/NewPostPageTopBar/NewPostPageTop
 import DatePicker from "../../components/DatePicker/DatePicker";
 import GroupSizePicker2 from "../../components/CreatePost/GroupSizePicker2";
 import PriceRangeSlider2 from "../../components/CreatePost/PriceRangeSlider2";
+import HotelNeighborhoodForm from "../../components/CreatePost/HotelNeighborhoodForm";
 import { Card } from "flowbite-react";
 import Post from "../../components/Post/Post";
+import RoommatePreferenceForm from "../../components/CreatePost/RoommatePreferenceForm";
+import AboutYouForm from "../../components/CreatePost/AboutYouForm";
+import { useNavigate } from "react-router-dom";
 
 function formatDateObject(dateStr) {
   const date = new Date(dateStr);
@@ -15,6 +19,8 @@ function formatDateObject(dateStr) {
 }
 
 function NewPostPage() {
+  const navigate = useNavigate();
+
   const [eventName, setEventName] = useState(undefined);
   const [checkInDate, setCheckInDate] = useState("1/1");
   const [checkOutDate, setCheckOutDate] = useState("12/30");
@@ -29,18 +35,43 @@ function NewPostPage() {
 
   const [priceRange, setPriceRange] = useState([0, 1000]);
 
+  const [selfIntro, setSelfIntro] = useState("");
+  const [preferences, setPreferences] = useState("");
+
+  const [bookingStatus, setBookingStatus] = useState("");
+  const [hotel, setHotel] = useState("");
+  const [neighborhood, setNeighborhood] = useState("");
+
   const handleSubmit = (event) => {
     event.preventDefault();
     // handle form submission
-    console.log(checkInDate);
-    console.log(checkOutDate);
+
+    // Create a new post object based on the form data
+    const newPost = {
+      images: [
+        "https://www.billboard.com/wp-content/uploads/2023/03/feature-TWICE-women-in-music-billboard-2023-bb-sami-drasin-12-1548.jpg",
+      ], // Array of image URLs
+      event: eventName,
+      checkInDate: checkInDate,
+      checkOutDate: checkOutDate,
+      hasNumGenders: [hasFemaleCnt, hasMaleCnt, hasOtherCnt],
+      wantNumGenders: [wantFemaleCnt, wantMaleCnt, wantOtherCnt],
+      // ... other form data ...
+      bookingStatus: bookingStatus,
+      hotel: hotel,
+      neighborhoodList: [neighborhood],
+      priceRange: priceRange,
+      userRating: 4.0, // Default user rating
+    };
+
+    navigate("/DYScovery-code/results", { state: { newPost: newPost } });
   };
 
   return (
     <div className="min-h-screen flex-col items-center justify-between p-8 relative">
       <NewPostPageTopBar />
       <div className="grid grid-cols-4 space-x-6">
-        <form onSubmit={handleSubmit} className="col-span-3 space-y-3">
+        <form onSubmit={handleSubmit} className="px-4 col-span-3 space-y-3">
           <Card>
             <h1 className="text-xl font-bold dark:text-white">
               Basic Information
@@ -48,7 +79,7 @@ function NewPostPage() {
             {/* Event name */}
             <div>
               <h2
-                for="event name"
+                htmlFor="event name"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Event Name
@@ -65,7 +96,7 @@ function NewPostPage() {
             {/* Check in/out dates */}
             <div>
               <h2
-                for="check-in/out dates"
+                htmlFor="check-in/out dates"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Check-in/out Dates
@@ -94,7 +125,7 @@ function NewPostPage() {
             {/* Group gender numbers */}
             <div>
               <h2
-                for="current roommate"
+                htmlFor="current roommate"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 We are a Group of
@@ -120,10 +151,10 @@ function NewPostPage() {
                 />
               </div>
               <h2
-                for="future roommate"
+                htmlFor="future roommate"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                We are Looking for
+                We are Looking htmlFor
               </h2>
               <div className="flex justify-between space-x-6">
                 <GroupSizePicker2
@@ -150,7 +181,7 @@ function NewPostPage() {
             {/* Price Range */}
             <div>
               <h2
-                for="price range"
+                htmlFor="price range"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Budget per room per day
@@ -163,7 +194,7 @@ function NewPostPage() {
             {/* Cover Image */}
             <div>
               <h2
-                for="cover image"
+                htmlFor="cover image"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Cover Image
@@ -182,115 +213,25 @@ function NewPostPage() {
             </div>
           </Card>
 
-          <Card>
-            <h1 class="text-xl font-bold dark:text-white">About You</h1>
-            <div>
-              <h2
-                for="about_you"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Self-introduction
-              </h2>
-              <textarea
-                id="about_you"
-                rows="4"
-                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Tell others more about you (fandom, hobbies, etc.)..."
-              ></textarea>
-            </div>
-          </Card>
-
-          <Card>
-            <h1 class="text-xl font-bold dark:text-white">
-              Roommate Preference
-            </h1>
-            <div>
-              <h2
-                for="roommate preference"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                We are Looking for Roommates Who
-              </h2>
-              <textarea
-                id="roommate_preferences"
-                rows="4"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Enter your specific preferences for prospective roommates (sleeping habits, etc.)..."
-              ></textarea>
-            </div>
-          </Card>
-          <Card>
-            <h1 class="text-xl font-bold dark:text-white">
-              Hotel / Neighborhood
-            </h1>
-            <h2 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-              Hotel Searching Status
-            </h2>
-
-            <div class="grid gap-6 md:grid-cols-3">
-              <div class="flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 mr-4">
-                <input
-                  id="bordered-radio-1"
-                  type="radio"
-                  value=""
-                  name="bordered-radio"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                />
-                <label
-                  for="bordered-radio-1"
-                  class="w-full py-4 ml-2 text-xs font-medium text-gray-900 dark:text-gray-300"
-                >
-                  We already booked a place{" "}
-                </label>
-              </div>
-              <div class="inline-flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 mr-4">
-                <input
-                  id="bordered-radio-2"
-                  type="radio"
-                  value=""
-                  name="bordered-radio"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                />
-                <label
-                  for="bordered-radio-2"
-                  class="w-full py-4 ml-2 text-xs font-medium text-gray-900 dark:text-gray-300"
-                >
-                  We haven't booked a place,{"\n"} but have some preference
-                </label>
-              </div>
-              <div class="inline-flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 mr-4">
-                <input
-                  id="bordered-radio-3"
-                  type="radio"
-                  value=""
-                  name="bordered-radio"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                />
-                <label
-                  for="bordered-radio-3"
-                  class="w-full py-4 ml-2 text-xs font-medium text-gray-900 dark:text-gray-300"
-                >
-                  We prefer searching with future roommates together
-                </label>
-              </div>
-            </div>
-
-            <div>
-              <h2
-                for="hotel preference"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Hotel Information
-              </h2>
-              <textarea
-                id="hotel_preferences"
-                rows="4"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Enter your specific preferences for (prospective) place to stay (location, neighborhood, etc.)..."
-              ></textarea>
-            </div>
-          </Card>
+          <AboutYouForm onChange={(value) => setSelfIntro(value)} />
+          <RoommatePreferenceForm onChange={(value) => setPreferences(value)} />
+          <HotelNeighborhoodForm
+            onBookingStatusChange={(value) =>
+              value.startsWith("hotel")
+                ? setBookingStatus("booked")
+                : setBookingStatus("not-booked")
+            }
+            onNeighborhoodInfoChange={(value) => {
+              setNeighborhood(value);
+              setHotel("");
+            }}
+            onHotelInfoChange={(value) => {
+              setNeighborhood("");
+              setHotel(value);
+            }}
+          />
         </form>
+
         <div className="col-span-1">
           <div className="sticky top-40 grid space-y-6">
             <div className="grid place-items-center font-medium text-lg">
@@ -306,12 +247,17 @@ function NewPostPage() {
               hasNumGenders={[hasFemaleCnt, hasMaleCnt, hasOtherCnt]}
               wantNumGenders={[wantFemaleCnt, wantMaleCnt, wantOtherCnt]}
               priceRange={priceRange}
+              hotel={hotel}
+              neighborhoodList={
+                neighborhood ? [neighborhood] : ["Your neighborhood listing"]
+              }
               isClickable={false}
             />
             <div className="grid place-items-center">
               <button
                 type="submit"
                 className="mt-2 px-6 py-1 bg-cyan-500 hover:bg-cyan-700 text-white font-bold rounded-lg"
+                onClick={handleSubmit}
               >
                 Submit
               </button>

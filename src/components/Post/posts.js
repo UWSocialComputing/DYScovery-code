@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Post from "./Post";
 import postsData from "../../data/posts.json";
+import { useLocation } from "react-router-dom";
 
 // Function to create Date object from "MM/DD" formatted date string
 function createDateObject(dateString) {
@@ -20,8 +21,18 @@ export default function Posts({
   bookingStatus = [],
   isClickable = false,
 }) {
+  const location = useLocation();
+  const [posts, setPosts] = useState(postsData);
+
+  useEffect(() => {
+    if (location.state && location.state.newPost) {
+      const newPost = location.state.newPost;
+      setPosts((prevPosts) => [...prevPosts, newPost]);
+    }
+  }, [location.state]);
+
   // Filter posts based on multiple criteria
-  const filteredPosts = postsData.filter((post) => {
+  const filteredPosts = posts.filter((post) => {
     // Check if the post's event contains the search value
     if (
       searchQuery &&
@@ -84,7 +95,7 @@ export default function Posts({
   });
 
   // Apply the showPartial flag and render the filtered posts
-  const renderedPosts = showPartial ? postsData.slice(0, 3) : filteredPosts;
+  const renderedPosts = showPartial ? posts.slice(0, 3) : filteredPosts;
   renderedPosts.sort(() => Math.random() - 0.5);
 
   if (renderedPosts.length >= 1) {
