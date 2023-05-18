@@ -5,7 +5,7 @@ function GroupSizePicker({ onChange }) {
 
   const handleGroupSizeChange = (event) => {
     const newSize = event.target.value;
-    if ((newSize >= 1 && newSize <= 7) || newSize == "") {
+    if ((newSize >= 1 && newSize <= 7) || newSize === "") {
       setGroupSize(newSize);
       onChange(newSize); // Pass the new value to the parent component
     }

@@ -4,11 +4,26 @@ import DatePicker from "../../components/DatePicker/DatePicker";
 import GroupSizePicker2 from "../../components/CreatePost/GroupSizePicker2";
 import PriceRangeSlider2 from "../../components/CreatePost/PriceRangeSlider2";
 import HotelNeighborhoodForm from "../../components/CreatePost/HotelNeighborhoodForm";
-import { Card } from "flowbite-react";
+import { Card, Toast } from "flowbite-react";
 import Post from "../../components/Post/Post";
 import RoommatePreferenceForm from "../../components/CreatePost/RoommatePreferenceForm";
 import AboutYouForm from "../../components/CreatePost/AboutYouForm";
 import { useNavigate } from "react-router-dom";
+import { HiX } from "react-icons/hi";
+
+function ErrorToast({ onClose }) {
+  return (
+    <Toast>
+      <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-500 dark:bg-red-800 dark:text-red-200">
+        <HiX className="h-5 w-5" />
+      </div>
+      <div className="ml-3 text-sm font-normal">
+        Please fill out all fields.
+      </div>
+      <Toast.Toggle onClick={onClose} />
+    </Toast>
+  );
+}
 
 function formatDateObject(dateStr) {
   const date = new Date(dateStr);
@@ -20,6 +35,8 @@ function formatDateObject(dateStr) {
 
 function NewPostPage() {
   const navigate = useNavigate();
+
+  const [showErrorToast, setShowErrorToast] = useState(false);
 
   const [eventName, setEventName] = useState(undefined);
   const [checkInDate, setCheckInDate] = useState("1/1");
@@ -42,9 +59,34 @@ function NewPostPage() {
   const [hotel, setHotel] = useState("");
   const [neighborhood, setNeighborhood] = useState("");
 
+  const handleCloseErrorToast = () => {
+    setShowErrorToast(false);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    // handle form submission
+
+    // Perform form validation
+    if (
+      !eventName ||
+      !checkInDate ||
+      !checkOutDate ||
+      !hasFemaleCnt ||
+      !hasMaleCnt ||
+      !hasOtherCnt ||
+      !wantFemaleCnt ||
+      !wantMaleCnt ||
+      !wantOtherCnt ||
+      !priceRange ||
+      !selfIntro ||
+      !preferences ||
+      !bookingStatus ||
+      (!hotel && !neighborhood)
+    ) {
+      // If any required field is empty, display an error toast
+      setShowErrorToast(true);
+      return;
+    }
 
     // Create a new post object based on the form data
     const newPost = {
@@ -70,201 +112,207 @@ function NewPostPage() {
   return (
     <div className="min-h-screen flex-col items-center justify-between p-8 relative">
       <NewPostPageTopBar />
-      <div className="grid grid-cols-4 space-x-6">
-        <form onSubmit={handleSubmit} className="px-4 col-span-3 space-y-3">
-          <Card>
-            <h1 className="text-xl font-bold dark:text-white">
-              Basic Information
-            </h1>
-            {/* Event name */}
-            <div>
-              <h2
-                htmlFor="event name"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Event Name
-              </h2>
-              <input
-                type="text"
-                id="event-name"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                value={eventName}
-                onChange={(e) => setEventName(e.target.value)}
-              />
-            </div>
-
-            {/* Check in/out dates */}
-            <div>
-              <h2
-                htmlFor="check-in/out dates"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Check-in/out Dates
-              </h2>
-              <div date-rangepicker className="flex items-center">
-                <DatePicker
-                  dateTitle="Check-in Date"
-                  showTitle={false}
-                  onChange={(selectedDate) => {
-                    setCheckInDate(formatDateObject(selectedDate));
-                  }}
-                  isStart={true}
-                />
-                <span className="mx-4 text-gray-500">to</span>
-                <DatePicker
-                  dateTitle="Check-out Date"
-                  showTitle={false}
-                  onChange={(selectedDate) => {
-                    setCheckOutDate(formatDateObject(selectedDate));
-                  }}
-                  isStart={false}
+      <form onSubmit={handleSubmit}>
+        <div className="grid grid-cols-4 space-x-6">
+          <div className="px-4 col-span-3 space-y-3">
+            <Card>
+              <h1 className="text-xl font-bold dark:text-white">
+                Basic Information
+              </h1>
+              {/* Event name */}
+              <div>
+                <h2
+                  htmlFor="event name"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Event Name
+                </h2>
+                <input
+                  type="text"
+                  id="event-name"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  value={eventName}
+                  onChange={(e) => setEventName(e.target.value)}
+                  required
                 />
               </div>
-            </div>
 
-            {/* Group gender numbers */}
-            <div>
-              <h2
-                htmlFor="current roommate"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                We are a Group of
-              </h2>
-              <div className="flex justify-between space-x-6 mb-3">
-                <GroupSizePicker2
-                  gender="Female"
-                  onChange={(newSize) => {
-                    setHasFemaleCnt(newSize);
-                  }}
-                />
-                <GroupSizePicker2
-                  gender="Male"
-                  onChange={(newSize) => {
-                    setHasMaleCnt(newSize);
-                  }}
-                />
-                <GroupSizePicker2
-                  gender="Non-Binary"
-                  onChange={(newSize) => {
-                    setHasOtherCnt(newSize);
-                  }}
+              {/* Check in/out dates */}
+              <div>
+                <h2
+                  htmlFor="check-in/out dates"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Check-in/out Dates
+                </h2>
+                <div className="flex items-center">
+                  <DatePicker
+                    dateTitle="Check-in Date"
+                    showTitle={false}
+                    onChange={(selectedDate) => {
+                      setCheckInDate(formatDateObject(selectedDate));
+                    }}
+                    isStart={true}
+                  />
+                  <span className="mx-4 text-gray-500">to</span>
+                  <DatePicker
+                    dateTitle="Check-out Date"
+                    showTitle={false}
+                    onChange={(selectedDate) => {
+                      setCheckOutDate(formatDateObject(selectedDate));
+                    }}
+                    isStart={false}
+                  />
+                </div>
+              </div>
+
+              {/* Group gender numbers */}
+              <div>
+                <h2
+                  htmlFor="current roommate"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  We are a Group of
+                </h2>
+                <div className="flex justify-between space-x-6 mb-3">
+                  <GroupSizePicker2
+                    gender="Female"
+                    onChange={(newSize) => {
+                      setHasFemaleCnt(newSize);
+                    }}
+                  />
+                  <GroupSizePicker2
+                    gender="Male"
+                    onChange={(newSize) => {
+                      setHasMaleCnt(newSize);
+                    }}
+                  />
+                  <GroupSizePicker2
+                    gender="Non-Binary"
+                    onChange={(newSize) => {
+                      setHasOtherCnt(newSize);
+                    }}
+                  />
+                </div>
+                <h2
+                  htmlFor="future roommate"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  We are Looking For
+                </h2>
+                <div className="flex justify-between space-x-6">
+                  <GroupSizePicker2
+                    gender="Female"
+                    onChange={(newSize) => {
+                      setWantFemaleCnt(newSize);
+                    }}
+                  />
+                  <GroupSizePicker2
+                    gender="Male"
+                    onChange={(newSize) => {
+                      setWantMaleCnt(newSize);
+                    }}
+                  />
+                  <GroupSizePicker2
+                    gender="Non-Binary"
+                    onChange={(newSize) => {
+                      setWantOtherCnt(newSize);
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Price Range */}
+              <div>
+                <h2
+                  htmlFor="price range"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Budget per room per day
+                </h2>
+                <PriceRangeSlider2
+                  onChange={(newRangeValues) => setPriceRange(newRangeValues)}
                 />
               </div>
-              <h2
-                htmlFor="future roommate"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                We are Looking htmlFor
-              </h2>
-              <div className="flex justify-between space-x-6">
-                <GroupSizePicker2
-                  gender="Female"
-                  onChange={(newSize) => {
-                    setWantFemaleCnt(newSize);
-                  }}
+
+              {/* Cover Image */}
+              <div>
+                <h2
+                  htmlFor="cover image"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Cover Image
+                </h2>
+                <input
+                  className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                  id="cover_image"
+                  type="file"
                 />
-                <GroupSizePicker2
-                  gender="Male"
-                  onChange={(newSize) => {
-                    setWantMaleCnt(newSize);
-                  }}
-                />
-                <GroupSizePicker2
-                  gender="Non-Binary"
-                  onChange={(newSize) => {
-                    setWantOtherCnt(newSize);
-                  }}
-                />
+                <div
+                  className="mt-1 text-sm text-gray-500 dark:text-gray-300"
+                  id="user_avatar_help"
+                >
+                  Upload an useful cover image to attract potential roommates!
+                </div>
               </div>
-            </div>
+            </Card>
 
-            {/* Price Range */}
-            <div>
-              <h2
-                htmlFor="price range"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Budget per room per day
-              </h2>
-              <PriceRangeSlider2
-                onChange={(newRangeValues) => setPriceRange(newRangeValues)}
-              />
-            </div>
-
-            {/* Cover Image */}
-            <div>
-              <h2
-                htmlFor="cover image"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Cover Image
-              </h2>
-              <input
-                className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                id="cover_image"
-                type="file"
-              />
-              <div
-                className="mt-1 text-sm text-gray-500 dark:text-gray-300"
-                id="user_avatar_help"
-              >
-                Upload an useful cover image to attract potential roommates!
-              </div>
-            </div>
-          </Card>
-
-          <AboutYouForm onChange={(value) => setSelfIntro(value)} />
-          <RoommatePreferenceForm onChange={(value) => setPreferences(value)} />
-          <HotelNeighborhoodForm
-            onBookingStatusChange={(value) =>
-              value.startsWith("hotel")
-                ? setBookingStatus("booked")
-                : setBookingStatus("not-booked")
-            }
-            onNeighborhoodInfoChange={(value) => {
-              setNeighborhood(value);
-              setHotel("");
-            }}
-            onHotelInfoChange={(value) => {
-              setNeighborhood("");
-              setHotel(value);
-            }}
-          />
-        </form>
-
-        <div className="col-span-1">
-          <div className="sticky top-40 grid space-y-6">
-            <div className="grid place-items-center font-medium text-lg">
-              Listing Preview
-            </div>
-            <Post
-              images={[
-                "https://www.billboard.com/wp-content/uploads/2023/03/feature-TWICE-women-in-music-billboard-2023-bb-sami-drasin-12-1548.jpg",
-              ]}
-              event={eventName ? eventName : "Your Event Name"}
-              checkInDate={checkInDate}
-              checkOutDate={checkOutDate}
-              hasNumGenders={[hasFemaleCnt, hasMaleCnt, hasOtherCnt]}
-              wantNumGenders={[wantFemaleCnt, wantMaleCnt, wantOtherCnt]}
-              priceRange={priceRange}
-              hotel={hotel}
-              neighborhoodList={
-                neighborhood ? [neighborhood] : ["Your neighborhood listing"]
-              }
-              isClickable={false}
+            <AboutYouForm onChange={(value) => setSelfIntro(value)} />
+            <RoommatePreferenceForm
+              onChange={(value) => setPreferences(value)}
             />
-            <div className="grid place-items-center">
-              <button
-                type="submit"
-                className="mt-2 px-6 py-1 bg-cyan-500 hover:bg-cyan-700 text-white font-bold rounded-lg"
-                onClick={handleSubmit}
-              >
-                Submit
-              </button>
+            <HotelNeighborhoodForm
+              onBookingStatusChange={(value) =>
+                value.startsWith("hotel")
+                  ? setBookingStatus("booked")
+                  : setBookingStatus("not-booked")
+              }
+              onNeighborhoodInfoChange={(value) => {
+                setNeighborhood(value);
+                setHotel("");
+              }}
+              onHotelInfoChange={(value) => {
+                setNeighborhood("");
+                setHotel(value);
+              }}
+            />
+          </div>
+
+          <div className="col-span-1">
+            <div className="sticky top-40 grid space-y-6">
+              {showErrorToast && <ErrorToast onClose={handleCloseErrorToast} />}
+              <div className="grid place-items-center font-medium text-lg">
+                Listing Preview
+              </div>
+              <Post
+                images={[
+                  "https://www.billboard.com/wp-content/uploads/2023/03/feature-TWICE-women-in-music-billboard-2023-bb-sami-drasin-12-1548.jpg",
+                ]}
+                event={eventName ? eventName : "Your Event Name"}
+                checkInDate={checkInDate}
+                checkOutDate={checkOutDate}
+                hasNumGenders={[hasFemaleCnt, hasMaleCnt, hasOtherCnt]}
+                wantNumGenders={[wantFemaleCnt, wantMaleCnt, wantOtherCnt]}
+                priceRange={priceRange}
+                hotel={hotel}
+                neighborhoodList={
+                  neighborhood ? [neighborhood] : ["Your neighborhood listing"]
+                }
+                isClickable={false}
+              />
+              <div className="grid place-items-center">
+                <button
+                  type="submit"
+                  className="mt-2 px-6 py-1 bg-cyan-500 hover:bg-cyan-700 text-white font-bold rounded-lg"
+                  onClick={handleSubmit}
+                >
+                  Submit
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

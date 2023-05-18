@@ -31,6 +31,7 @@ const PriceRangeSlider2 = ({ onChange }) => {
           getAriaLabel={(index) =>
             index === 0 ? "Minimum price" : "Maximum price"
           }
+          required={true}
         />
       </div>
     </div>

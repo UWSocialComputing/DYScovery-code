@@ -7,7 +7,7 @@ function HotelNeighborhoodForm({
   onHotelInfoChange,
 }) {
   const [selectedOption, setSelectedOption] = useState("");
-  const [textareaTitle, setTextareaTitle] = useState("Hotel information");
+  const [textareaTitle, setTextareaTitle] = useState("More information");
   const [textareaValue, setTextareaValue] = useState("");
 
   const options = [
@@ -33,9 +33,11 @@ function HotelNeighborhoodForm({
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
-    setTextareaTitle(
-      event.target.checked ? "Hotel information" : "Neighborhood information"
-    );
+    if (event.target.value === "hotel") {
+      setTextareaTitle("Hotel information");
+    } else {
+      setTextareaTitle("Neighborhood information");
+    }
     onBookingStatusChange(event.target.value);
   };
 
