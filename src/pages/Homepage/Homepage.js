@@ -1,7 +1,6 @@
 import * as React from "react";
 import Title from "../../components/Title/Title";
 import EventSearchBar from "../../components/EventSearchBar/EventSearchBar";
-import Posts from "../../components/Post/Posts";
 import { Link } from "react-router-dom";
 
 function HomePage() {
@@ -22,8 +21,17 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="self-start text-xl font-semibold">Explore...</div>
-      <Posts showPartial={true} isClickable={false} />
+      <div className="mb-20">
+        <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+          Explore events like...
+        </h2>
+        <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+          <li>BLACKPINK WORLD TOUR [BORN PINK]</li>
+          <li>Ed Sheeran: +-=÷x Tour</li>
+          <li>KPOP BANG</li>
+          <li>Twice 5th World Tour 'Ready To Be'</li>
+        </ul>
+      </div>
     </div>
   );
 }

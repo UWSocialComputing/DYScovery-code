@@ -6,14 +6,14 @@ import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 const generateImages = (images) => {
   if (images.length > 1) {
     return (
-      <div className="h-40">
+      <div className="h-60 ">
         <Carousel slide={false} indicators={false}>
           {images.map((imageSrc, index) => (
             <img
               key={index}
               src={imageSrc}
               alt="..."
-              className="object-cover aspect-[2/1] w-full"
+              className="object-cover aspect-[2/1] w-full rounded-lg"
             />
           ))}
         </Carousel>
@@ -21,17 +21,53 @@ const generateImages = (images) => {
     );
   }
   return (
-    <div className="h-48">
+    <div className="h-60">
       {images.map((imageSrc, index) => (
         <img
           key={index}
           src={imageSrc}
           alt="..."
-          className="object-cover aspect-[2/1] w-full h-48 rounded-lg"
+          className="object-cover aspect-[2/1] w-full h-54 rounded-lg"
         />
       ))}
     </div>
   );
+};
+
+const getGenderLabels = (numbers) => {
+  const [numOfFemales, numOfMales, numOfNonBinary] = numbers;
+  const genderLabels = [];
+
+  if (numOfFemales > 0) {
+    genderLabels.push({
+      count: numOfFemales,
+      label: `${numOfFemales > 1 ? "females" : "female"}`,
+      color: "pink",
+    });
+  }
+
+  if (numOfMales > 0) {
+    genderLabels.push({
+      count: numOfMales,
+      label: `${numOfMales > 1 ? "males" : "male"}`,
+      color: "blue",
+    });
+  }
+
+  if (numOfNonBinary > 0) {
+    genderLabels.push({
+      count: numOfNonBinary,
+      label: `${numOfNonBinary > 1 ? "people" : "person"}`,
+      color: "gray",
+    });
+  }
+
+  return genderLabels.map((gender) => (
+    <span key={gender.label}>
+      {gender.count}{" "}
+      <span className={`text-${gender.color}-700`}>{gender.label}</span>{" "}
+    </span>
+  ));
 };
 
 const generateSocialMedia = () => {
@@ -89,35 +125,37 @@ const generateSocialMedia = () => {
   );
 };
 
-function AboutInfo() {
-  const images = [
-    "https://www.allkpop.com/upload/2022/08/content/041116/1659626214-untitled-1.jpg",
-  ];
-
+function AboutInfo({
+  images,
+  event,
+  checkInDate,
+  checkOutDate,
+  hasNumGenders,
+  wantNumGenders,
+  priceRange,
+  selfIntro,
+  roommatePreference,
+}) {
   return (
     <Card id={"about"}>
       <div className="flex">
         <div className="flex-1 font-normal text-sm text-gray-700 dark:text-gray-400 pr-8">
           <h2 className="text-xl font-bold dark:text-white mb-3">About</h2>
           <ul className="list-disc pl-6">
-            <li>Event: DYS Concert</li>
-            <li>Dates: 4/28/23 - 4/29/23</li>
-            <li>We are: 2 females</li>
-            <li>Looking for: 2 females</li>
-            <li>Budget: $150-$300 per day</li>
+            <li>Event: {event}</li>
+            <li>
+              Dates: {checkInDate}/23 - {checkOutDate}/23
+            </li>
+            <li>We are: {getGenderLabels(hasNumGenders)}</li>
+            <li>Looking for: {getGenderLabels(wantNumGenders)}</li>
+            <li>
+              Budget: ${priceRange[0]}-${priceRange[1]} per day
+            </li>
           </ul>
           <br></br>
-          <p>
-            We are college students and fans of DYS! We have already purchased
-            tickets for the concert.
-          </p>
+          <p>{selfIntro}</p>
           <br></br>
-          <p>
-            We prefer you are also attending the DYS concert and in college.
-            Looking for easygoing roommates who won't make noise after 1am. If
-            you're interested in travelling around Seattle together, let us
-            know.
-          </p>
+          <p>{roommatePreference}</p>
         </div>
         <div className="flex-1">
           {generateImages(images)}

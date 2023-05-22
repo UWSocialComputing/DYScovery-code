@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, Avatar } from "flowbite-react";
 import TicketVerificationAlert from "../TicketVerificationAlert/TicketVerificationAlert";
 
-function ChatWindow({ onClose }) {
+function ChatWindow({ onClose, user }) {
   const [messages, setMessages] = useState([
     "Hello! We are still looking for people to join us. Could you introduce yourself a bit?",
   ]);
@@ -22,11 +22,8 @@ function ChatWindow({ onClose }) {
     >
       <div className="bg-cyan-500 text-white px-4 py-2 rounded-t-lg flex items-center justify-between">
         <div className="flex items-center">
-          <Avatar
-            img="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
-            rounded={true}
-          />
-          <h3 className="ml-4 font-medium">Chat with Ella</h3>
+          <Avatar img={user.profileImage} rounded={true} />
+          <h3 className="ml-4 font-medium">Chat with {user.name}</h3>
         </div>
         <button
           className="text-white hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300"
@@ -44,10 +41,7 @@ function ChatWindow({ onClose }) {
                   <>
                     <div className="flex-shrink-0">
                       {/* Avatar component for the left side */}
-                      <Avatar
-                        img="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
-                        rounded={true}
-                      />
+                      <Avatar img={user.profileImage} rounded={true} />
                     </div>
                     <div
                       key={index}
@@ -97,7 +91,7 @@ function ChatWindow({ onClose }) {
   );
 }
 
-function InterestCard() {
+function InterestCard({ userInformation }) {
   const [showChat, setShowChat] = useState(false);
 
   const handleBeginChat = () => {
@@ -124,7 +118,9 @@ function InterestCard() {
             Begin Chat
           </button>
         </div>
-        {showChat && <ChatWindow onClose={handleCloseChat} />}
+        {showChat && (
+          <ChatWindow onClose={handleCloseChat} user={userInformation[0]} />
+        )}
       </div>
     </Card>
   );

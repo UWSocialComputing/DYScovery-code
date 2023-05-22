@@ -12,14 +12,7 @@ function DetailPageTopBar() {
             </span>
           </div>
         </Navbar.Brand>
-        <div className="flex justify-end">
-          <Navbar.Collapse>
-            <Navbar.Link href="#about">About</Navbar.Link>
-            <Navbar.Link href="#neighborhood">Neighborhood</Navbar.Link>
-            <Navbar.Link href="#reviews">User Reviews</Navbar.Link>
-          </Navbar.Collapse>
-        </div>
-        <div>
+        <div className="w-1/2">
           <EventSearchBar />
         </div>
         <div className="flex md:order-2">

@@ -41,76 +41,7 @@ function renderRatingStars(rating) {
   return starComponents;
 }
 
-function ReviewInfo() {
-  const userInformation = [
-    {
-      profileImage:
-        "https://flowbite.com/docs/images/people/profile-picture-3.jpg",
-      name: "Ella C.",
-      joinedDate: "August 2022",
-      ratings: [4.8, 5.0, 4.5, 5.0],
-      criteria: [
-        "Cleanliness",
-        "Communication",
-        "Trustworthiness",
-        "Respectfulness",
-      ],
-      reviews: [
-        {
-          name: "Julia L.",
-          profileImage:
-            "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-          joinedDate: "August 2022",
-          helpfulCount: 2,
-          rating: 5,
-          date: "May 14, 2023",
-          reviewTitle: "Favorite roommates!",
-          reviewContent:
-            "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again.",
-        },
-        {
-          name: "Arya M.",
-          profileImage:
-            "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
-          joinedDate: "Feb 2023",
-          helpfulCount: 1,
-          rating: 4,
-          date: "March 3, 2023",
-          reviewTitle: "Cool people",
-          reviewContent:
-            "Had a great experience living with Ella. She was very friendly and respectful. The only downside was that the Wi-Fi was a bit slow at times.",
-        },
-      ],
-    },
-    {
-      profileImage:
-        "https://st.depositphotos.com/1144472/1532/i/600/depositphotos_15320783-stock-photo-portrait-of-young-woman-at.jpg",
-      name: "Rory R.",
-      joinedDate: "Feb 2023",
-      ratings: [4.0, 4.2, 3.8, 4.5],
-      criteria: [
-        "Cleanliness",
-        "Communication",
-        "Trustworthiness",
-        "Respectfulness",
-      ],
-      reviews: [
-        {
-          name: "Arya M.",
-          profileImage:
-            "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
-          joinedDate: "Feb 2023",
-          helpfulCount: 1,
-          rating: 4,
-          date: "March 3, 2023",
-          reviewTitle: "Cool people",
-          reviewContent:
-            "Had a great experience living with Ella. She was very friendly and respectful. The only downside was that the Wi-Fi was a bit slow at times.",
-        },
-      ],
-    },
-  ];
-
+function ReviewInfo({ userInformation }) {
   const [selectedAvatarIndex, setSelectedAvatarIndex] = useState(null);
 
   const handleAvatarClick = (index) => {

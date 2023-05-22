@@ -68,6 +68,7 @@ const generateImages = (images) => {
 };
 
 export default function Post({
+  postId,
   images,
   event,
   checkInDate,
@@ -114,7 +115,7 @@ export default function Post({
     return (
       <div className="w-72 bg-white shadow rounded-lg hover:shadow-cyan-500/50 hover:shadow-lg">
         {generateImages(images)}
-        <Link to="/DYScovery-code/details">
+        <Link to={`/DYScovery-code/details/${postId}`}>
           <PostContent />
         </Link>
       </div>

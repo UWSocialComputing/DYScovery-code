@@ -11,7 +11,10 @@ export default function App() {
         <Routes>
           <Route path="/DYScovery-code" element={<HomePage />} />
           <Route path="/DYScovery-code/results" element={<ResultPage />} />
-          <Route path="/DYScovery-code/details" element={<DetailPage />} />
+          <Route
+            path="/DYScovery-code/details/:postId"
+            element={<DetailPage />}
+          />
           <Route path="/DYScovery-code/postnew" element={<NewPostPage />} />
         </Routes>
       </div>
