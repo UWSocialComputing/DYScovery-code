@@ -166,7 +166,6 @@
   },
   {
     "postId": 3,
-    "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.6239399290803!2d-122.34340762350878!3d47.61400158746624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490154b7e336c5b%3A0x202a343f203ca321!2sWarwick%20Seattle!5e0!3m2!1sen!2sus!4v1684178350536!5m2!1sen!2sus",
     "images": [
       "https://images.trvl-media.com/lodging/6000000/5390000/5388900/5388888/c29c3df0.jpg?impolicy=resizecrop&rw=1200&ra=fit"
     ],
@@ -180,7 +179,72 @@
     "neighborhoodList": ["Tacoma"],
     "priceRange": [200, 300],
     "userRating": 5.0,
-    "bookingStatus": "booked"
+    "bookingStatus": "booked",
+    "selfIntro": "We are college students and fans of DYS! We have already purchased tickets for the concert.",
+    "roommatePreference": "We prefer you are also attending the DYS concert and in college. Looking for easygoing roommates who won't make noise after 1am. If you're interested in travelling around Seattle together, let us know.",
+    "walkingDist": 10,
+    "drivingDist": 3,
+    "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.6239399290803!2d-122.34340762350878!3d47.61400158746624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490154b7e336c5b%3A0x202a343f203ca321!2sWarwick%20Seattle!5e0!3m2!1sen!2sus!4v1684178350536!5m2!1sen!2sus",
+    "userInformation": [
+      {
+        "profileImage": "https://flowbite.com/docs/images/people/profile-picture-3.jpg",
+        "name": "Ella C.",
+        "joinedDate": "August 2022",
+        "ratings": [4.8, 5.0, 4.5, 5.0],
+        "criteria": [
+          "Cleanliness",
+          "Communication",
+          "Trustworthiness",
+          "Respectfulness"
+        ],
+        "reviews": [
+          {
+            "name": "Julia L.",
+            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
+            "joinedDate": "August 2022",
+            "helpfulCount": 2,
+            "rating": 5,
+            "date": "May 14, 2023",
+            "reviewTitle": "Favorite roommates!",
+            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
+          },
+          {
+            "name": "Arya M.",
+            "profileImage": "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
+            "joinedDate": "Feb 2023",
+            "helpfulCount": 1,
+            "rating": 4,
+            "date": "March 3, 2023",
+            "reviewTitle": "Cool people",
+            "reviewContent": "Had a great experience living with Ella. She was very friendly and respectful. The only downside was that the Wi-Fi was a bit slow at times."
+          }
+        ]
+      },
+      {
+        "profileImage": "https://st.depositphotos.com/1144472/1532/i/600/depositphotos_15320783-stock-photo-portrait-of-young-woman-at.jpg",
+        "name": "Rory R.",
+        "joinedDate": "Feb 2023",
+        "ratings": [4.0, 4.2, 3.8, 4.5],
+        "criteria": [
+          "Cleanliness",
+          "Communication",
+          "Trustworthiness",
+          "Respectfulness"
+        ],
+        "reviews": [
+          {
+            "name": "Arya M.",
+            "profileImage": "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
+            "joinedDate": "Feb 2023",
+            "helpfulCount": 1,
+            "rating": 4,
+            "date": "March 3, 2023",
+            "reviewTitle": "Cool people",
+            "reviewContent": "Had a great experience living with Ella. She was very friendly and respectful. The only downside was that the Wi-Fi was a bit slow at times."
+          }
+        ]
+      }
+    ]
   },
   {
     "postId": 4,

@@ -11,15 +11,13 @@ import AboutYouForm from "../../components/CreatePost/AboutYouForm";
 import { useNavigate } from "react-router-dom";
 import { HiX } from "react-icons/hi";
 
-function ErrorToast({ onClose }) {
+function ErrorToast({ onClose, errorMessage }) {
   return (
     <Toast>
       <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-500 dark:bg-red-800 dark:text-red-200">
         <HiX className="h-5 w-5" />
       </div>
-      <div className="ml-3 text-sm font-normal">
-        Please fill out all fields.
-      </div>
+      <div className="ml-3 text-sm font-normal">{errorMessage} </div>
       <Toast.Toggle onClick={onClose} />
     </Toast>
   );
@@ -37,18 +35,19 @@ function NewPostPage() {
   const navigate = useNavigate();
 
   const [showErrorToast, setShowErrorToast] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const [eventName, setEventName] = useState(undefined);
   const [checkInDate, setCheckInDate] = useState("1/1");
   const [checkOutDate, setCheckOutDate] = useState("12/30");
 
-  const [hasFemaleCnt, setHasFemaleCnt] = useState("");
-  const [hasMaleCnt, setHasMaleCnt] = useState("");
-  const [hasOtherCnt, setHasOtherCnt] = useState("");
+  const [hasFemaleCnt, setHasFemaleCnt] = useState(0);
+  const [hasMaleCnt, setHasMaleCnt] = useState(0);
+  const [hasOtherCnt, setHasOtherCnt] = useState(0);
 
-  const [wantFemaleCnt, setWantFemaleCnt] = useState("");
-  const [wantMaleCnt, setWantMaleCnt] = useState("");
-  const [wantOtherCnt, setWantOtherCnt] = useState("");
+  const [wantFemaleCnt, setWantFemaleCnt] = useState(0);
+  const [wantMaleCnt, setWantMaleCnt] = useState(0);
+  const [wantOtherCnt, setWantOtherCnt] = useState(0);
 
   const [priceRange, setPriceRange] = useState([0, 1000]);
 
@@ -67,16 +66,22 @@ function NewPostPage() {
     event.preventDefault();
 
     // Perform form validation
+    const missingFields = [];
+    if (!eventName) missingFields.push("Event name");
+    if (hasFemaleCnt + hasMaleCnt + hasOtherCnt < 1)
+      missingFields.push("Number of people in your group");
+    if (wantFemaleCnt + wantMaleCnt + wantOtherCnt < 1)
+      missingFields.push("Number of people your group is looking for");
+    if (!selfIntro) missingFields.push("Self introduction");
+    if (!preferences) missingFields.push("Roommate preferences");
+    if (!bookingStatus) missingFields.push("Hotel Searching Status");
+    if (!hotel && !neighborhood)
+      missingFields.push("Hotel/neighborhood information");
+
     if (
       !eventName ||
-      !checkInDate ||
-      !checkOutDate ||
-      !hasFemaleCnt ||
-      !hasMaleCnt ||
-      !hasOtherCnt ||
-      !wantFemaleCnt ||
-      !wantMaleCnt ||
-      !wantOtherCnt ||
+      hasFemaleCnt + hasMaleCnt + hasOtherCnt === 0 ||
+      wantFemaleCnt + wantMaleCnt + wantOtherCnt === 0 ||
       !priceRange ||
       !selfIntro ||
       !preferences ||
@@ -85,6 +90,7 @@ function NewPostPage() {
     ) {
       // If any required field is empty, display an error toast
       setShowErrorToast(true);
+      setErrorMessage("Missing: " + missingFields.join(", ") + ".");
       return;
     }
 
@@ -280,13 +286,18 @@ function NewPostPage() {
 
           <div className="col-span-1">
             <div className="sticky top-40 grid space-y-6">
-              {showErrorToast && <ErrorToast onClose={handleCloseErrorToast} />}
+              {showErrorToast && (
+                <ErrorToast
+                  onClose={handleCloseErrorToast}
+                  errorMessage={errorMessage}
+                />
+              )}
               <div className="grid place-items-center font-medium text-lg">
                 Listing Preview
               </div>
               <Post
                 images={[
-                  "https://www.billboard.com/wp-content/uploads/2023/03/feature-TWICE-women-in-music-billboard-2023-bb-sami-drasin-12-1548.jpg",
+                  "https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png",
                 ]}
                 event={eventName ? eventName : "Your Event Name"}
                 checkInDate={checkInDate}

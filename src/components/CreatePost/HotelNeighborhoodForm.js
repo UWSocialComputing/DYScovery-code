@@ -18,14 +18,8 @@ function HotelNeighborhoodForm({
         "Enter hotel information (location, distance to venue, etc.)...",
     },
     {
-      label: "We haven't booked a place, but have some preference",
-      value: "neighborhood-1",
-      placeholder:
-        "Enter your specific preferences for prospective place to stay (location, neighborhood, etc.)...",
-    },
-    {
-      label: "We prefer searching with future roommates together",
-      value: "neighborhood-2",
+      label: "We haven't booked a place yet",
+      value: "neighborhood",
       placeholder:
         "Enter any preferences for prospective place to stay (location, neighborhood, etc.)...",
     },
@@ -34,9 +28,9 @@ function HotelNeighborhoodForm({
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
     if (event.target.value === "hotel") {
-      setTextareaTitle("Hotel information");
+      setTextareaTitle("Hotel Information");
     } else {
-      setTextareaTitle("Neighborhood information");
+      setTextareaTitle("Neighborhood nformation");
     }
     onBookingStatusChange(event.target.value);
   };
