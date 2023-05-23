@@ -8,7 +8,7 @@ function NewPostPageTopBar() {
         <Navbar.Brand href="/DYScovery-code" className="">
           <div className="text-4xl font-extrabold">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-blue-500">
-              DYScovery.com
+              DYScovery
             </span>
           </div>
         </Navbar.Brand>
