@@ -30,7 +30,7 @@ function HotelNeighborhoodForm({
     if (event.target.value === "hotel") {
       setTextareaTitle("Hotel Information");
     } else {
-      setTextareaTitle("Neighborhood nformation");
+      setTextareaTitle("Neighborhood information");
     }
     onBookingStatusChange(event.target.value);
   };

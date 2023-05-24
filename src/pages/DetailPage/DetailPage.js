@@ -11,6 +11,7 @@ function DetailPage() {
   const post = postsData.find((post) => post.postId === parseInt(postId));
 
   if (!post) {
+    // the case for newly created post
     return <div>Loading...</div>;
   }
 

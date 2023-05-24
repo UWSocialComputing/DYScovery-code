@@ -97,7 +97,7 @@ function NewPostPage() {
     // Create a new post object based on the form data
     const newPost = {
       images: [
-        "https://www.billboard.com/wp-content/uploads/2023/03/feature-TWICE-women-in-music-billboard-2023-bb-sami-drasin-12-1548.jpg",
+        "https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png",
       ], // Array of image URLs
       event: eventName,
       checkInDate: checkInDate,
