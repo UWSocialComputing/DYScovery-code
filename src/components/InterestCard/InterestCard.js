@@ -36,7 +36,7 @@ function ChatWindow({ onClose, user }) {
         <div className="flex-1 ">
           <div className="overflow-y-auto p-3">
             {messages.map((message, index) => (
-              <div className="flex justify-center space-x-3">
+              <div key={index} className="flex justify-center space-x-3">
                 {index % 2 === 0 ? (
                   <>
                     <div className="flex-shrink-0">

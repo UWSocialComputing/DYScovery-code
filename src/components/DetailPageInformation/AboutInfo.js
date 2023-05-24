@@ -142,29 +142,46 @@ function AboutInfo({
         <div className="flex-1 font-normal text-sm text-gray-700 dark:text-gray-400 pr-8">
           <h2 className="text-xl font-bold dark:text-white mb-3">About</h2>
           {/* Important details */}
-          <div class="mt-6 border-t border-gray-100">
-            <dl class="divide-y divide-gray-100"/>
-              <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-gray-900">Event:</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{event}</dd>
-              </div>
-              <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-gray-900">Dates:</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{checkInDate}/23 - {checkOutDate}/23</dd>
-              </div>
-              <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-gray-900">We are:</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{getGenderLabels(hasNumGenders)}</dd>
-              </div>
-              <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-gray-900">Looking for:</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{getGenderLabels(wantNumGenders)}</dd>
-              </div>
-              <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-gray-900">Budget:</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">${priceRange[0]}-${priceRange[1]} per day</dd>
-              </div>
+          <div class="mt-6">
+            <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium text-gray-900">Event:</dt>
+              <dd class="mt-1 text-sm leading-4 text-gray-700 sm:col-span-2 sm:mt-0">
+                {event}
+              </dd>
             </div>
+            <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-4 text-gray-900">
+                Dates:
+              </dt>
+              <dd class="mt-1 text-sm leading-4 text-gray-700 sm:col-span-2 sm:mt-0">
+                {checkInDate}/23 - {checkOutDate}/23
+              </dd>
+            </div>
+            <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-4 text-gray-900">
+                We are:
+              </dt>
+              <dd class="mt-1 text-sm leading-4 text-gray-700 sm:col-span-2 sm:mt-0">
+                {getGenderLabels(hasNumGenders)}
+              </dd>
+            </div>
+            <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-4 text-gray-900">
+                Looking for:
+              </dt>
+              <dd class="mt-1 text-sm leading-4 text-gray-700 sm:col-span-2 sm:mt-0">
+                {getGenderLabels(wantNumGenders)}
+              </dd>
+            </div>
+            <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-4 text-gray-900">
+                Budget:
+              </dt>
+              <dd class="mt-1 text-sm leading-4 text-gray-700 sm:col-span-2 sm:mt-0">
+                ${priceRange[0]}-${priceRange[1]} per day
+              </dd>
+            </div>
+          </div>
           <br></br>
           <p>{selfIntro}</p>
           <br></br>
