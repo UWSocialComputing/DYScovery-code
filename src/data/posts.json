@@ -15,8 +15,8 @@
     "priceRange": [150, 200],
     "userRating": 4.5,
     "bookingStatus": "not-booked",
-    "selfIntro": "We are college students and fans of DYS! We have already purchased tickets for the concert.",
-    "roommatePreference": "We prefer you are also attending the DYS concert and in college. Looking for easygoing roommates who won't make noise after 1am. If you're interested in travelling around Seattle together, let us know.",
+    "selfIntro": "We are college students and fans of Twice! We have already purchased tickets for the concert.",
+    "roommatePreference": "We prefer you are also attending the concert and in college. Looking for easygoing roommates who won't make noise after 1am. If you're interested in travelling around Seattle together, let us know.",
     "walkingDist": 10,
     "drivingDist": 3,
     "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21520.53792388379!2d-122.35617967207523!3d47.60538219842079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab6b122572d%3A0x4cc65f51348e1d43!2sDowntown%20Seattle%2C%20Seattle%2C%20WA!5e0!3m2!1sen!2sus!4v1684866891488!5m2!1sen!2sus",
@@ -45,7 +45,7 @@
           },
           {
             "name": "Arya M.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
+            "profileImage": "https://gravatar.com/avatar/1ac7b611b0ac71da23371cddf4e1414a?s=400&d=robohash&r=x",
             "joinedDate": "Feb 2023",
             "helpfulCount": 1,
             "rating": 4,
@@ -98,17 +98,17 @@
     "priceRange": [200, 300],
     "userRating": 4.3,
     "bookingStatus": "not-booked",
-    "selfIntro": "We are college students and fans of DYS! We have already purchased tickets for the concert.",
-    "roommatePreference": "We prefer you are also attending the DYS concert and in college. Looking for easygoing roommates who won't make noise after 1am. If you're interested in travelling around Seattle together, let us know.",
-    "walkingDist": 10,
-    "drivingDist": 3,
+    "selfIntro": "We are huge fans of Twice and super excited for their concert. Looking for two roommates to share the hotel expenses.",
+    "roommatePreference": "Prefer two male roommates who are quiet and respectful. Let's enjoy the concert together!",
+    "walkingDist": 5,
+    "drivingDist": 2,
     "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86666.59875429624!2d-122.53939764415875!3d47.249226341769955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549054ee2b659567%3A0x62219c07ebb09e82!2sTacoma%2C%20WA!5e0!3m2!1sen!2sus!4v1684866977725!5m2!1sen!2sus",
     "userInformation": [
       {
-        "profileImage": "https://flowbite.com/docs/images/people/profile-picture-3.jpg",
-        "name": "Ella C.",
-        "joinedDate": "August 2022",
-        "ratings": [4.8, 5.0, 4.5, 5.0],
+        "profileImage": "https://avatars.dicebear.com/v2/male/2a05bc63fbe18155163862e35132ce5a.svg",
+        "name": "John D.",
+        "joinedDate": "August 2021",
+        "ratings": [4.5, 4.8, 4.2, 4.7],
         "criteria": [
           "Cleanliness",
           "Communication",
@@ -117,32 +117,22 @@
         ],
         "reviews": [
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
+            "name": "Taeyang L.",
+            "profileImage": "https://gravatar.com/avatar/73e7de0dc658167a70d166351c42ec3a?s=400&d=robohash&r=x",
+            "joinedDate": "May 2021",
             "helpfulCount": 2,
             "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
-          },
-          {
-            "name": "Arya M.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
-            "joinedDate": "Feb 2023",
-            "helpfulCount": 1,
-            "rating": 4,
-            "date": "March 3, 2023",
-            "reviewTitle": "Cool people",
-            "reviewContent": "Had a great experience living with Ella. She was very friendly and respectful. The only downside was that the Wi-Fi was a bit slow at times."
+            "date": "May 5, 2023",
+            "reviewTitle": "Great roommate!",
+            "reviewContent": "John was an excellent roommate during our previous trip. He was responsible and easy to communicate with. Would highly recommend."
           }
         ]
       },
       {
-        "profileImage": "https://st.depositphotos.com/1144472/1532/i/600/depositphotos_15320783-stock-photo-portrait-of-young-woman-at.jpg",
-        "name": "Rory R.",
+        "profileImage": "https://gravatar.com/avatar/bee5de61928e4ae0c8b6f7481423553e?s=400&d=robohash&r=x",
+        "name": "Ted R.",
         "joinedDate": "Feb 2023",
-        "ratings": [4.0, 4.2, 3.8, 4.5],
+        "ratings": [4.7, 4.9, 3.4, 4.5],
         "criteria": [
           "Cleanliness",
           "Communication",
@@ -151,14 +141,14 @@
         ],
         "reviews": [
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
+            "name": "Kim L.",
+            "profileImage": "https://avatars.dicebear.com/v2/gridy/bee5de61928e4ae0c8b6f7481423553e.svg",
             "joinedDate": "August 2022",
-            "helpfulCount": 2,
+            "helpfulCount": 1,
             "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
+            "date": "Febuary 20, 2023",
+            "reviewTitle": "Great experience!",
+            "reviewContent": "Ted was an amazing roommate. He was always considerate, and we had a lot of fun exploring the city together. I would gladly room with him again."
           }
         ]
       }
@@ -180,17 +170,17 @@
     "priceRange": [200, 300],
     "userRating": 5.0,
     "bookingStatus": "booked",
-    "selfIntro": "We are college students and fans of DYS! We have already purchased tickets for the concert.",
-    "roommatePreference": "We prefer you are also attending the DYS concert and in college. Looking for easygoing roommates who won't make noise after 1am. If you're interested in travelling around Seattle together, let us know.",
-    "walkingDist": 10,
-    "drivingDist": 3,
+    "selfIntro": "Hi! I am flying from another country and look for another girl to share my hotel room!",
+    "roommatePreference": "It would be nice if I can room with someone who can speak Korean!",
+    "walkingDist": 5,
+    "drivingDist": 2,
     "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.677666100963!2d-122.4404260880891!3d47.242450571038475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549055709f567c7b%3A0x4fb0352b913e6486!2sHoliday%20Inn%20Express%20%26%20Suites%20Tacoma%20Downtown%2C%20an%20IHG%20Hotel!5e0!3m2!1sen!2sus!4v1684867284662!5m2!1sen!2sus",    
     "userInformation": [
       {
-        "profileImage": "https://flowbite.com/docs/images/people/profile-picture-3.jpg",
-        "name": "Ella C.",
-        "joinedDate": "August 2022",
-        "ratings": [4.8, 5.0, 4.5, 5.0],
+        "profileImage": "https://robohash.org/bee5de61928e4ae0c8b6f7481423553e?set=set4&bgset=&size=400x400",
+        "name": "Jiyoon C.",
+        "joinedDate": "August 2021",
+        "ratings": [4.0, 4.0, 3.5, 5.0],
         "criteria": [
           "Cleanliness",
           "Communication",
@@ -199,48 +189,24 @@
         ],
         "reviews": [
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
-            "helpfulCount": 2,
-            "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
-          },
-          {
-            "name": "Arya M.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
-            "joinedDate": "Feb 2023",
+            "name": "Jenny D.",
+            "profileImage": "https://robohash.org/dbc391cdea5a3d947f8493955b4cd3b7?set=set4&bgset=&size=400x400",
+            "joinedDate": "June 2022",
             "helpfulCount": 1,
             "rating": 4,
-            "date": "March 3, 2023",
-            "reviewTitle": "Cool people",
-            "reviewContent": "Had a great experience living with Ella. She was very friendly and respectful. The only downside was that the Wi-Fi was a bit slow at times."
-          }
-        ]
-      },
-      {
-        "profileImage": "https://st.depositphotos.com/1144472/1532/i/600/depositphotos_15320783-stock-photo-portrait-of-young-woman-at.jpg",
-        "name": "Rory R.",
-        "joinedDate": "Feb 2023",
-        "ratings": [4.0, 4.2, 3.8, 4.5],
-        "criteria": [
-          "Cleanliness",
-          "Communication",
-          "Trustworthiness",
-          "Respectfulness"
-        ],
-        "reviews": [
+            "date": "June 4, 2022",
+            "reviewTitle": "Good roommate!",
+            "reviewContent": "Very friendly and quiet :)"
+          },
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
-            "helpfulCount": 2,
+            "name": "Kay M.",
+            "profileImage": "https://avatars.dicebear.com/v2/female/dbc391cdea5a3d947f8493955b4cd3b7.svg",
+            "joinedDate": "Feb 2023",
+            "helpfulCount": 1,
             "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
+            "date": "July 3, 2022",
+            "reviewTitle": "Friendly and Helpful",
+            "reviewContent": "She took care of me when I was sick! I am so grateful to have her as my short-term roommate."
           }
         ]
       }
@@ -264,17 +230,17 @@
     "priceRange": [100, 150],
     "userRating": 2.2,
     "bookingStatus": "not-booked",
-    "selfIntro": "We are college students and fans of DYS! We have already purchased tickets for the concert.",
-    "roommatePreference": "We prefer you are also attending the DYS concert and in college. Looking for easygoing roommates who won't make noise after 1am. If you're interested in travelling around Seattle together, let us know.",
-    "walkingDist": 10,
-    "drivingDist": 3,
+    "selfIntro": "I am just a causual concertgoer.",
+    "roommatePreference": "Look for someone quiet and clean.",
+    "walkingDist": 8,
+    "drivingDist": 5,
     "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86350.23528006677!2d-122.37819308259222!3d47.442267308174614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54905b6cc75964d3%3A0x7822b21dad52b646!2sSeaTac%2C%20WA!5e0!3m2!1sen!2sus!4v1684867179031!5m2!1sen!2sus",    
     "userInformation": [
       {
-        "profileImage": "https://flowbite.com/docs/images/people/profile-picture-3.jpg",
-        "name": "Ella C.",
-        "joinedDate": "August 2022",
-        "ratings": [4.8, 5.0, 4.5, 5.0],
+        "profileImage": "https://flowbite.com/docs/images/people/profile-picture-2.jpg",
+        "name": "Ben D.",
+        "joinedDate": "June 2021",
+        "ratings": [4.2, 4.3, 4.5, 5.0],
         "criteria": [
           "Cleanliness",
           "Communication",
@@ -283,48 +249,24 @@
         ],
         "reviews": [
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
+            "name": "Mark L.",
+            "profileImage": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250",
+            "joinedDate": "August 2021",
             "helpfulCount": 2,
             "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
+            "date": "May 5, 2023",
+            "reviewTitle": "Great Roommate!",
+            "reviewContent": "Ben was an excellent roommate. He was friendly, organized, and respectful of shared spaces."
           },
           {
-            "name": "Arya M.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
-            "joinedDate": "Feb 2023",
+            "name": "Ryan A.",
+            "profileImage": "https://flowbite.com/docs/images/people/profile-picture-1.jpg",
+            "joinedDate": "July 2022",
             "helpfulCount": 1,
-            "rating": 4,
-            "date": "March 3, 2023",
-            "reviewTitle": "Cool people",
-            "reviewContent": "Had a great experience living with Ella. She was very friendly and respectful. The only downside was that the Wi-Fi was a bit slow at times."
-          }
-        ]
-      },
-      {
-        "profileImage": "https://st.depositphotos.com/1144472/1532/i/600/depositphotos_15320783-stock-photo-portrait-of-young-woman-at.jpg",
-        "name": "Rory R.",
-        "joinedDate": "Feb 2023",
-        "ratings": [4.0, 4.2, 3.8, 4.5],
-        "criteria": [
-          "Cleanliness",
-          "Communication",
-          "Trustworthiness",
-          "Respectfulness"
-        ],
-        "reviews": [
-          {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
-            "helpfulCount": 2,
             "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
+            "date": "April 18, 2023",
+            "reviewTitle": "Highly recommend",
+            "reviewContent": "Best roommate ever. Would totally room with him again!!"
           }
         ]
       }
