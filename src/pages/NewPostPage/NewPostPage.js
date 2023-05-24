@@ -60,6 +60,8 @@ function NewPostPage() {
 
   const [priceRange, setPriceRange] = useState([0, 1000]);
 
+  const [coverImages, setCoverImages] = useState([]);
+
   const [selfIntro, setSelfIntro] = useState("");
   const [preferences, setPreferences] = useState("");
 
@@ -69,6 +71,17 @@ function NewPostPage() {
 
   const handleCloseErrorToast = () => {
     setShowErrorToast(false);
+  };
+
+  const handleCoverImageChange = (event) => {
+    const files = event.target.files;
+    if (files.length > 0) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setCoverImages((prevImages) => [...prevImages, reader.result]);
+      };
+      reader.readAsDataURL(files[0]);
+    }
   };
 
   const handleSubmit = (event) => {
@@ -106,9 +119,12 @@ function NewPostPage() {
     // Create a new post object based on the form data
     const newPost = {
       postId: postId,
-      images: [
-        "https://imgix.bustle.com/uploads/image/2022/8/25/7e4b684c-1f25-43c0-bac7-e238d1702f2a-twice1.JPG?w=374&h=264&fit=crop&crop=faces&auto=format%2Ccompress",
-      ], // Array of image URLs
+      images:
+        coverImages.length > 0
+          ? coverImages
+          : [
+              "https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png",
+            ], // Array of image URLs
       event: eventName,
       checkInDate: checkInDate,
       checkOutDate: checkOutDate,
@@ -262,18 +278,21 @@ function NewPostPage() {
                   htmlFor="cover image"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  Cover Image
+                  Cover Image(s)
                 </h2>
                 <input
                   className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                   id="cover_image"
                   type="file"
+                  multiple
+                  onChange={handleCoverImageChange}
                 />
                 <div
                   className="mt-1 text-sm text-gray-500 dark:text-gray-300"
                   id="user_avatar_help"
                 >
-                  Upload an useful cover image to attract potential roommates!
+                  Upload some useful cover images to attract potential
+                  roommates!
                 </div>
               </div>
             </Card>
@@ -311,9 +330,13 @@ function NewPostPage() {
                 Listing Preview
               </div>
               <Post
-                images={[
-                  "https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png",
-                ]}
+                images={
+                  coverImages.length > 0
+                    ? coverImages
+                    : [
+                        "https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png",
+                      ]
+                }
                 event={eventName ? eventName : "Your Event Name"}
                 checkInDate={checkInDate}
                 checkOutDate={checkOutDate}

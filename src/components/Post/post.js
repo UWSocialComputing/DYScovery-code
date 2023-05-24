@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import { Carousel } from "flowbite-react";
 
+function generateRandomNumber(min, max) {
+  // Generate a random number between min (inclusive) and max (inclusive)
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 const getGenderLabels = (numOfFemales, numOfMales, numOfNonBinary) => {
   const genderLabels = [];
 
@@ -128,8 +133,8 @@ export default function Post({
     neighborhoodList,
     selfIntro,
     roommatePreference,
-    walkingDist: 15,
-    drivingDist: 7,
+    walkingDist: generateRandomNumber(10, 20),
+    drivingDist: generateRandomNumber(3, 10),
     mapSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86350.23528006677!2d-122.37819308259222!3d47.442267308174614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54905b6cc75964d3%3A0x7822b21dad52b646!2sSeaTac%2C%20WA!5e0!3m2!1sen!2sus!4v1684867179031!5m2!1sen!2sus",
     userInformation: [
