@@ -35,7 +35,7 @@ function renderRatingBars(ratings, criteria) {
 
 function renderRatingStars(rating) {
   const starComponents = Array.from({ length: 5 }, (_, index) => (
-    <Rating.Star key={index} filled={index + 1 < rating} />
+    <Rating.Star key={index} filled={index + 0.99 < rating} />
   ));
 
   return starComponents;
@@ -51,6 +51,24 @@ function ReviewInfo({ userInformation }) {
       setSelectedAvatarIndex(index);
     }
   };
+
+  if (!userInformation) {
+    userInformation = [
+      {
+        profileImage:
+          "https://flowbite.com/docs/images/people/profile-picture-4.jpg",
+        name: "Happy .",
+        joinedDate: "May 2023",
+        ratings: [4.0, 4.0, 4.0, 4.0],
+        criteria: [
+          "Cleanliness",
+          "Communication",
+          "Trustworthiness",
+          "Respectfulness",
+        ],
+      },
+    ];
+  }
 
   return (
     <Card id="reviews">
@@ -104,9 +122,13 @@ function ReviewInfo({ userInformation }) {
         </div>
         <div className="flex-1 space-y-6">
           {selectedAvatarIndex !== null &&
-            userInformation[selectedAvatarIndex].reviews.map(
-              (review, index) => <ReviewDetail review={review} key={index} />
-            )}
+          userInformation[selectedAvatarIndex].reviews
+            ? userInformation[selectedAvatarIndex].reviews.map(
+                (review, index) => <ReviewDetail review={review} key={index} />
+              )
+            : selectedAvatarIndex !== null && (
+                <div>There is no reviews for this user yet.</div>
+              )}
         </div>
       </div>
     </Card>

@@ -15,6 +15,7 @@ export default function App() {
             path="/DYScovery-code/details/:postId"
             element={<DetailPage />}
           />
+          <Route path="/DYScovery-code/details/new" element={<DetailPage />} />
           <Route path="/DYScovery-code/postnew" element={<NewPostPage />} />
         </Routes>
       </div>

@@ -3,16 +3,19 @@ import AboutInfo from "../../components/DetailPageInformation/AboutInfo";
 import NeighborhoodInfo from "../../components/DetailPageInformation/NeighborhoodInfo";
 import ReviewInfo from "../../components/DetailPageInformation/ReviewInfo";
 import InterestCard from "../../components/InterestCard/InterestCard";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import postsData from "../../data/posts.json";
 
 function DetailPage() {
   const { postId } = useParams();
-  const post = postsData.find((post) => post.postId === parseInt(postId));
+  const location = useLocation();
+
+  var post = postsData.find((post) => post.postId === parseInt(postId));
 
   if (!post) {
     // the case for newly created post
-    return <div>Loading...</div>;
+    console.log(location);
+    post = location.state.newPost;
   }
 
   return (

@@ -76,8 +76,10 @@ export default function Post({
   hasNumGenders,
   wantNumGenders,
   priceRange,
+  bookingStatus,
   hotel,
   neighborhoodList,
+  userRating,
   isClickable = false,
 }) {
   const [hasNumOfFemales, hasNumOfMales, hasNumOfNonBinary] = hasNumGenders;
@@ -111,17 +113,37 @@ export default function Post({
     );
   }
 
+  const newPost = {
+    images,
+    event,
+    checkInDate,
+    checkOutDate,
+    hasNumGenders,
+    wantNumGenders,
+    priceRange,
+    bookingStatus,
+    hotel,
+    neighborhoodList,
+    userRating,
+  };
+
   if (isClickable) {
     return (
       <div className="w-72 bg-white shadow rounded-lg hover:shadow-cyan-500/50 hover:shadow-lg">
         {generateImages(images)}
-        <Link to={`/DYScovery-code/details/${postId}`}>
+        <Link
+          to={
+            postId
+              ? `/DYScovery-code/details/${postId}`
+              : "/DYScovery-code/details/new"
+          }
+          state={{ newPost }}
+        >
           <PostContent />
         </Link>
       </div>
     );
   }
-
   return (
     <div className="w-72 bg-white shadow rounded-lg">
       {generateImages(images)}
