@@ -52,24 +52,6 @@ function ReviewInfo({ userInformation }) {
     }
   };
 
-  if (!userInformation) {
-    userInformation = [
-      {
-        profileImage:
-          "https://flowbite.com/docs/images/people/profile-picture-4.jpg",
-        name: "Happy .",
-        joinedDate: "May 2023",
-        ratings: [4.0, 4.0, 4.0, 4.0],
-        criteria: [
-          "Cleanliness",
-          "Communication",
-          "Trustworthiness",
-          "Respectfulness",
-        ],
-      },
-    ];
-  }
-
   return (
     <Card id="reviews">
       <h2 className="text-xl font-bold dark:text-white">User Reviews</h2>

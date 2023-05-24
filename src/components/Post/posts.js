@@ -9,6 +9,29 @@ function createDateObject(dateString) {
   return new Date(new Date().getFullYear(), month - 1, day);
 }
 
+function computeOverallAverage(userInformation) {
+  let totalSum = 0;
+  let totalCount = 0;
+
+  userInformation?.forEach((element) => {
+    const ratings = element.ratings;
+    const elementSum = ratings.reduce(
+      (accumulator, rating) => accumulator + rating,
+      0
+    );
+    const elementCount = ratings.length;
+
+    totalSum += elementSum;
+    totalCount += elementCount;
+  });
+
+  if (totalCount === 0) {
+    return 4.0; // default rating
+  }
+
+  return totalSum / totalCount;
+}
+
 export default function Posts({
   showPartial = false,
   searchQuery,
@@ -86,7 +109,10 @@ export default function Posts({
     }
 
     // Check if the post's user rating is above the selected rating
-    if (userRating !== undefined && post.userRating < userRating) {
+    if (
+      userRating !== undefined &&
+      computeOverallAverage(post.userInformation) < userRating
+    ) {
       return false;
     }
 

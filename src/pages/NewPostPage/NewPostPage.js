@@ -97,7 +97,7 @@ function NewPostPage() {
     // Create a new post object based on the form data
     const newPost = {
       images: [
-        "https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png",
+        "https://imgix.bustle.com/uploads/image/2022/8/25/7e4b684c-1f25-43c0-bac7-e238d1702f2a-twice1.JPG?w=374&h=264&fit=crop&crop=faces&auto=format%2Ccompress",
       ], // Array of image URLs
       event: eventName,
       checkInDate: checkInDate,
@@ -105,11 +105,12 @@ function NewPostPage() {
       hasNumGenders: [hasFemaleCnt, hasMaleCnt, hasOtherCnt],
       wantNumGenders: [wantFemaleCnt, wantMaleCnt, wantOtherCnt],
       // ... other form data ...
+      priceRange: priceRange,
       bookingStatus: bookingStatus,
       hotel: hotel,
       neighborhoodList: [neighborhood],
-      priceRange: priceRange,
-      userRating: 4.0, // Default user rating
+      selfIntro: selfIntro,
+      roommatePreference: preferences,
     };
 
     navigate("/DYScovery-code/results", { state: { newPost: newPost } });

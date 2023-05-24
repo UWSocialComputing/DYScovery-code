@@ -79,7 +79,8 @@ export default function Post({
   bookingStatus,
   hotel,
   neighborhoodList,
-  userRating,
+  selfIntro,
+  roommatePreference,
   isClickable = false,
 }) {
   const [hasNumOfFemales, hasNumOfMales, hasNumOfNonBinary] = hasNumGenders;
@@ -124,7 +125,27 @@ export default function Post({
     bookingStatus,
     hotel,
     neighborhoodList,
-    userRating,
+    selfIntro,
+    roommatePreference,
+    walkingDist: 15,
+    drivingDist: 7,
+    mapSrc:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86350.23528006677!2d-122.37819308259222!3d47.442267308174614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54905b6cc75964d3%3A0x7822b21dad52b646!2sSeaTac%2C%20WA!5e0!3m2!1sen!2sus!4v1684867179031!5m2!1sen!2sus",
+    userInformation: [
+      {
+        profileImage:
+          "https://flowbite.com/docs/images/people/profile-picture-4.jpg",
+        name: "Happy H.",
+        joinedDate: "May 2023",
+        ratings: [4.0, 4.0, 4.0, 4.0],
+        criteria: [
+          "Cleanliness",
+          "Communication",
+          "Trustworthiness",
+          "Respectfulness",
+        ],
+      },
+    ],
   };
 
   if (isClickable) {
