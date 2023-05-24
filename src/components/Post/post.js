@@ -115,6 +115,7 @@ export default function Post({
   }
 
   const newPost = {
+    postId,
     images,
     event,
     checkInDate,

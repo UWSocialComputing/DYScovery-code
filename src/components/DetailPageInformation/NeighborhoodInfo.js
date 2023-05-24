@@ -28,28 +28,28 @@ function NeighborhoodInfo({
             </div>
           </div>
           <div className="w-1/2 font-normal text-sm text-gray-700 dark:text-gray-400">
-            <div class="pl-6">
-              <div class="py-2 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium text-gray-900">
+            <div className="pl-6">
+              <div className="py-2 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0">
+                <dt className="text-sm font-medium text-gray-900">
                   {hotel === "" ? "Neighborhood:" : "Hotel:"}
                 </dt>
-                <dd class="mt-1 text-sm leading-4 text-gray-700 sm:col-span-1 sm:mt-0">
+                <dd className="mt-1 text-sm leading-4 text-gray-700 sm:col-span-1 sm:mt-0">
                   {hotel === "" ? neighborhoodList.join(", ") : hotel}
                 </dd>
               </div>
-              <div class="px-4 py-2 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-4 text-gray-900">
+              <div className="px-4 py-2 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0">
+                <dt className="text-sm font-medium leading-4 text-gray-900">
                   Walking distance to venue:
                 </dt>
-                <dd class="mt-1 text-sm leading-4 text-gray-700 sm:col-span-1 sm:mt-0">
+                <dd className="mt-1 text-sm leading-4 text-gray-700 sm:col-span-1 sm:mt-0">
                   {walkingDist} minutes
                 </dd>
               </div>
-              <div class="px-4 py-2 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-4 text-gray-900">
+              <div className="px-4 py-2 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0">
+                <dt className="text-sm font-medium leading-4 text-gray-900">
                   Driving distance to venue:
                 </dt>
-                <dd class="mt-1 text-sm leading-4 text-gray-700 sm:col-span-1 sm:mt-0">
+                <dd className="mt-1 text-sm leading-4 text-gray-700 sm:col-span-1 sm:mt-0">
                   {drivingDist} minutes
                 </dd>
               </div>

@@ -14,7 +14,6 @@ function DetailPage() {
 
   if (!post) {
     // the case for newly created post
-    console.log(location);
     post = location.state.newPost;
   }
 

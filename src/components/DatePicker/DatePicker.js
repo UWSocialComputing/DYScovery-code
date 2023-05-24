@@ -11,7 +11,6 @@ export default function DatePicker({
   const [show, setShow] = useState(false);
 
   const handleChange = (selectedDate) => {
-    console.log("new date: " + selectedDate);
     onChange(selectedDate);
   };
 

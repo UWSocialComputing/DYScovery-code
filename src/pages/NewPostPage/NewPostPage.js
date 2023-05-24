@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NewPostPageTopBar from "../../components/NewPostPageTopBar/NewPostPageTopBar";
 import DatePicker from "../../components/DatePicker/DatePicker";
 import GroupSizePicker2 from "../../components/CreatePost/GroupSizePicker2";
@@ -37,7 +37,16 @@ function NewPostPage() {
   const [showErrorToast, setShowErrorToast] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const [eventName, setEventName] = useState(undefined);
+  const [postId, setPostId] = useState(100); // Initial postId value is 100 for new posts
+  // Retrieve the postId from localStorage on component mount
+  useEffect(() => {
+    const savedPostId = localStorage.getItem("postId");
+    if (savedPostId) {
+      setPostId(parseInt(savedPostId));
+    }
+  }, []);
+
+  const [eventName, setEventName] = useState("");
   const [checkInDate, setCheckInDate] = useState("1/1");
   const [checkOutDate, setCheckOutDate] = useState("12/30");
 
@@ -96,6 +105,7 @@ function NewPostPage() {
 
     // Create a new post object based on the form data
     const newPost = {
+      postId: postId,
       images: [
         "https://imgix.bustle.com/uploads/image/2022/8/25/7e4b684c-1f25-43c0-bac7-e238d1702f2a-twice1.JPG?w=374&h=264&fit=crop&crop=faces&auto=format%2Ccompress",
       ], // Array of image URLs
@@ -112,6 +122,10 @@ function NewPostPage() {
       selfIntro: selfIntro,
       roommatePreference: preferences,
     };
+
+    setPostId((prevId) => prevId + 1); // increment postId by 1
+    // Save the updated postId to localStorage
+    localStorage.setItem("postId", postId + 1);
 
     navigate("/DYScovery-code/results", { state: { newPost: newPost } });
   };

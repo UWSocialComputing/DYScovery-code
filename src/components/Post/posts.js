@@ -32,6 +32,20 @@ function computeOverallAverage(userInformation) {
   return totalSum / totalCount;
 }
 
+function filterUniquePosts(posts) {
+  const uniquePosts = [];
+  const postIds = [];
+
+  for (const post of posts) {
+    if (!postIds.includes(post.postId)) {
+      uniquePosts.push(post);
+      postIds.push(post.postId);
+    }
+  }
+
+  return uniquePosts;
+}
+
 export default function Posts({
   showPartial = false,
   searchQuery,
@@ -48,10 +62,23 @@ export default function Posts({
   const [posts, setPosts] = useState(postsData);
 
   useEffect(() => {
+    const storedPosts = localStorage.getItem("newPosts");
+    const parsedPosts = storedPosts ? JSON.parse(storedPosts) : [];
+
     if (location.state && location.state.newPost) {
       const newPost = location.state.newPost;
-      setPosts((prevPosts) => [...prevPosts, newPost]);
+
+      const postExists = parsedPosts.some(
+        (post) => Number(post.postId) === Number(newPost.postId)
+      ); // Convert postId values to numbers for comparison
+
+      if (!postExists) {
+        parsedPosts.push(newPost);
+        localStorage.setItem("newPosts", JSON.stringify(parsedPosts));
+      }
     }
+
+    setPosts(filterUniquePosts([...postsData, ...parsedPosts]));
   }, [location.state]);
 
   // Filter posts based on multiple criteria
@@ -123,6 +150,8 @@ export default function Posts({
   // Apply the showPartial flag and render the filtered posts
   const renderedPosts = showPartial ? posts.slice(0, 3) : filteredPosts;
   renderedPosts.sort(() => Math.random() - 0.5);
+
+  console.log(filteredPosts.map((post) => post.postId).join(", "));
 
   if (renderedPosts.length >= 1) {
     return (
