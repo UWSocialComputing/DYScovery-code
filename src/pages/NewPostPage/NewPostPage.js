@@ -147,9 +147,9 @@ function NewPostPage() {
   };
 
   return (
-    <div className="min-h-screen flex-col items-center justify-between p-8 relative">
+    <div className="min-h-screen flex-col items-center justify-between relative">
       <NewPostPageTopBar />
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="px-8 pb-8">
         <div className="grid grid-cols-4 space-x-6">
           <div className="px-4 col-span-3 space-y-3">
             <Card>

@@ -4,12 +4,12 @@ import EventSearchBar from "../EventSearchBar/EventSearchBar";
 
 function ResultPageTopBar() {
   return (
-    <div className="bg-white sticky top-0 z-50">
+    <div className="bg-white sticky top-0 z-50 px-8">
       <Navbar fluid={true} rounded={true} className="w-full mb-3">
         <Navbar.Brand href="/DYScovery-code" className="w-1/3">
           <div className="text-4xl font-extrabold">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-blue-500">
-              DYScovery.com
+              DYScovery
             </span>
           </div>
         </Navbar.Brand>

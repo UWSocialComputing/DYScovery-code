@@ -18,9 +18,9 @@ function DetailPage() {
   }
 
   return (
-    <div className="min-h-screen flex-col items-center justify-between p-8 relative">
+    <div className="min-h-screen flex-col items-center justify-between relative">
       <DetailPageTopBar />
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-4 px-8 pb-8">
         <div className="col-span-3 space-y-4">
           <AboutInfo {...post} />
           <NeighborhoodInfo {...post} />
@@ -28,7 +28,10 @@ function DetailPage() {
         </div>
         <div className="col-span-1">
           <div className="sticky top-20">
-            <InterestCard userInformation={post.userInformation} />
+            <InterestCard
+              userInformation={post.userInformation}
+              verified={post.postId % 3 !== 0}
+            />
           </div>
         </div>
       </div>

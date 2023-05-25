@@ -46,9 +46,9 @@ function ResultPage() {
   };
 
   return (
-    <div className="min-h-screen items-center justify-between p-8">
+    <div className="min-h-screen items-center justify-between">
       <ResultPageTopBar />
-      <div className="w-full grid grid-cols-4 gap-6">
+      <div className="w-full grid grid-cols-4 gap-6 px-8 pb-8">
         <div className="col-span-1">
           <Filter
             handleCheckInDateChange={handleCheckInDateChange}

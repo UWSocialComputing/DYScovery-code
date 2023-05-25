@@ -54,7 +54,9 @@ function ReviewInfo({ userInformation }) {
 
   return (
     <Card id="reviews">
-      <h2 className="text-xl font-bold dark:text-white">User Reviews</h2>
+      <h2 className="text-xl font-bold dark:text-white">
+        Reviews on Group Members
+      </h2>
       <p>Click on the avatar to see more. </p>
       <div id="detailedreviews" className="grid grid-cols-4">
         {userInformation.map((user, index) => (

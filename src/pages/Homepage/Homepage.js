@@ -26,10 +26,10 @@ function HomePage() {
           Explore events like...
         </h2>
         <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-          <li>BLACKPINK WORLD TOUR [BORN PINK]</li>
+          <li>Twice: 5th World Tour 'Ready To Be'</li>
           <li>Ed Sheeran: +-=÷x Tour</li>
-          <li>KPOP BANG</li>
-          <li>Twice 5th World Tour 'Ready To Be'</li>
+          <li>Blackpink: Born Pink World Tour</li>
+          <li>... and More!</li>
         </ul>
       </div>
     </div>
