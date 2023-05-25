@@ -468,17 +468,17 @@
     "neighborhoodList": ["Downtown Seattle", "SeaTac Airport"],
     "priceRange": [200, 300],
     "bookingStatus": "not-booked",
-    "selfIntro": "We are college students and fans of DYS! We have already purchased tickets for the concert.",
-    "roommatePreference": "We prefer you are also attending the DYS concert and in college. Looking for easygoing roommates who won't make noise after 1am. If you're interested in travelling around Seattle together, let us know.",
-    "walkingDist": 10,
-    "drivingDist": 3,
+    "selfIntro": "As a passionate Twice fan, I'm beyond excited to connect with fellow Once and immerse myself in the incredible world of Twice's music and performances. Let's create unforgettable moments together as we support and cheer for our beloved girls!",
+    "roommatePreference": "I'm seeking a roommate who shares the same love for Twice, and it would be fantastic to bond over our mutual adoration for the group while creating a comfortable and respectful living environment.",
+    "walkingDist": 20,
+    "drivingDist": 5,
     "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21520.53792388379!2d-122.35617967207523!3d47.60538219842079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab6b122572d%3A0x4cc65f51348e1d43!2sDowntown%20Seattle%2C%20Seattle%2C%20WA!5e0!3m2!1sen!2sus!4v1684866891488!5m2!1sen!2sus",
     "userInformation": [
       {
-        "profileImage": "https://flowbite.com/docs/images/people/profile-picture-3.jpg",
-        "name": "Ella C.",
-        "joinedDate": "August 2022",
-        "ratings": [4.8, 5.0, 4.5, 5.0],
+        "profileImage": "https://avataaars.io/?avatarStyle=Circle&topType=Hijab&accessoriesType=Round&hatColor=PastelGreen&facialHairType=MoustacheMagnum&facialHairColor=Red&clotheType=ShirtCrewNeck&clotheColor=Pink&eyeType=WinkWacky&eyebrowType=Default&mouthType=Smile&skinColor=Light",
+        "name": "Alice Z.",
+        "joinedDate": "July 2021",
+        "ratings": [4.1, 4.0, 4.9, 4.8],
         "criteria": [
           "Cleanliness",
           "Communication",
@@ -487,48 +487,14 @@
         ],
         "reviews": [
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
+            "name": "Zoe L.",
+            "profileImage": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Round&hairColor=PastelPink&facialHairType=Blank&clotheType=CollarSweater&clotheColor=PastelRed&eyeType=Hearts&eyebrowType=RaisedExcited&mouthType=Smile&skinColor=Pale",
+            "joinedDate": "August 2021",
             "helpfulCount": 2,
             "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
-          },
-          {
-            "name": "Arya M.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
-            "joinedDate": "Feb 2023",
-            "helpfulCount": 1,
-            "rating": 4,
-            "date": "March 3, 2023",
-            "reviewTitle": "Cool people",
-            "reviewContent": "Had a great experience living with Ella. She was very friendly and respectful. The only downside was that the Wi-Fi was a bit slow at times."
-          }
-        ]
-      },
-      {
-        "profileImage": "https://st.depositphotos.com/1144472/1532/i/600/depositphotos_15320783-stock-photo-portrait-of-young-woman-at.jpg",
-        "name": "Rory R.",
-        "joinedDate": "Feb 2023",
-        "ratings": [4.0, 4.2, 3.8, 4.5],
-        "criteria": [
-          "Cleanliness",
-          "Communication",
-          "Cooperativeness",
-          "Respectfulness"
-        ],
-        "reviews": [
-          {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
-            "helpfulCount": 2,
-            "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
+            "date": "June 4, 2022",
+            "reviewTitle": "Wonderful roommate!",
+            "reviewContent": "Living with Alice was an absolute delight. Her positive energy and friendly nature made our shared living space feel like a home away from home. She was considerate of everyone's personal space and always willing to lend a helping hand. We even had impromptu dance parties to Twice's music, creating some of the most fun memories together. If you're looking for a roommate who brings joy and a great sense of camaraderie, Alice is an excellent choice."
           }
         ]
       }
@@ -549,17 +515,17 @@
     "neighborhoodList": ["Downtown Seattle"],
     "priceRange": [200, 300],
     "bookingStatus": "not-booked",
-    "selfIntro": "We are college students and fans of DYS! We have already purchased tickets for the concert.",
-    "roommatePreference": "We prefer you are also attending the DYS concert and in college. Looking for easygoing roommates who won't make noise after 1am. If you're interested in travelling around Seattle together, let us know.",
-    "walkingDist": 10,
-    "drivingDist": 3,
+    "selfIntro": "We are undergraduate students at UW and HUGE fans of Ed Sheeran!",
+    "roommatePreference": "We would like to find another girl to join us, preferably also a student.",
+    "walkingDist": 20,
+    "drivingDist": 13,
     "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21520.53792388379!2d-122.35617967207523!3d47.60538219842079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab6b122572d%3A0x4cc65f51348e1d43!2sDowntown%20Seattle%2C%20Seattle%2C%20WA!5e0!3m2!1sen!2sus!4v1684866891488!5m2!1sen!2sus",
     "userInformation": [
       {
-        "profileImage": "https://flowbite.com/docs/images/people/profile-picture-3.jpg",
-        "name": "Ella C.",
-        "joinedDate": "August 2022",
-        "ratings": [4.8, 5.0, 4.5, 5.0],
+        "profileImage": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraightStrand&accessoriesType=Kurt&hairColor=BrownDark&facialHairType=Blank&facialHairColor=BrownDark&clotheType=BlazerSweater&clotheColor=Blue02&eyeType=Squint&eyebrowType=UnibrowNatural&mouthType=Smile&skinColor=Light",
+        "name": "Sarah C.",
+        "joinedDate": "March 2023",
+        "ratings": [5.0, 5.0, 5.0, 5.0],
         "criteria": [
           "Cleanliness",
           "Communication",
@@ -568,32 +534,46 @@
         ],
         "reviews": [
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
-            "helpfulCount": 2,
-            "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
-          },
-          {
-            "name": "Arya M.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
-            "joinedDate": "Feb 2023",
+            "name": "Han L.",
+            "profileImage": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Prescription01&hairColor=SilverGray&facialHairType=Blank&facialHairColor=Blonde&clotheType=BlazerSweater&clotheColor=Blue01&eyeType=Wink&eyebrowType=UpDown&mouthType=Default&skinColor=Pale",
+            "joinedDate": "August 2021",
             "helpfulCount": 1,
-            "rating": 4,
-            "date": "March 3, 2023",
-            "reviewTitle": "Cool people",
-            "reviewContent": "Had a great experience living with Ella. She was very friendly and respectful. The only downside was that the Wi-Fi was a bit slow at times."
+            "rating": 5,
+            "date": "March 24, 2023",
+            "reviewTitle": "Amazing Roommate with a Shared Love for Ed Sheeran!",
+            "reviewContent": "Sarah was not only an incredible roommate but also a fellow Ed Sheeran enthusiast. Our late-night jam sessions, belting out Ed's hits, created a unique bond that made our living experience even more special. Her friendly and considerate nature, combined with our shared passion for Ed's music, made for a harmonious and enjoyable living environment. If you're an Ed Sheeran fan seeking an amazing roommate, Sarah is the perfect choice!"
           }
         ]
       },
       {
-        "profileImage": "https://st.depositphotos.com/1144472/1532/i/600/depositphotos_15320783-stock-photo-portrait-of-young-woman-at.jpg",
-        "name": "Rory R.",
+        "profileImage": "https://gravatar.com/avatar/904f9e2d1b80392a60a529e64c7c1f8e?s=400&d=robohash&r=x",
+        "name": "Karina T.",
         "joinedDate": "Feb 2023",
-        "ratings": [4.0, 4.2, 3.8, 4.5],
+        "ratings": [4.0, 4.7, 4.8, 4.5],
+        "criteria": [
+          "Cleanliness",
+          "Communication",
+          "Trustworthiness",
+          "Respectfulness"
+        ],
+        "reviews": [
+          {
+            "name": "Lisa L.",
+            "profileImage": "https://avatars.dicebear.com/v2/female/904f9e2d1b80392a60a529e64c7c1f8e.svg",
+            "joinedDate": "December 2022",
+            "helpfulCount": 0,
+            "rating": 4,
+            "date": "March 14, 2023",
+            "reviewTitle": "Clean and nice!",
+            "reviewContent": "As title :P"
+          }
+        ]
+      },
+      {
+        "profileImage": "https://avatars.dicebear.com/v2/female/ec24ab0d384645d9a4c5bf5263953b64.svg",
+        "name": "Jihyo P.",
+        "joinedDate": "November 2022",
+        "ratings": [4.2, 3.7, 4.8, 4.2],
         "criteria": [
           "Cleanliness",
           "Communication",
@@ -602,14 +582,14 @@
         ],
         "reviews": [
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
+            "name": "Megan R.",
+            "profileImage": "https://robohash.org/904f9e2d1b80392a60a529e64c7c1f8e?set=set4&bgset=&size=400x400",
+            "joinedDate": "April 2022",
             "helpfulCount": 2,
-            "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
+            "rating": 4,
+            "date": "January 14, 2023",
+            "reviewTitle": "Good roommate to stay with!",
+            "reviewContent": "If you would like a roommate who sleeps early - cuz I do!"
           }
         ]
       }
@@ -630,17 +610,17 @@
     "neighborhoodList": ["Downtown Seattle", "University District"],
     "priceRange": [200, 300],
     "bookingStatus": "not-booked",
-    "selfIntro": "We are college students and fans of DYS! We have already purchased tickets for the concert.",
-    "roommatePreference": "We prefer you are also attending the DYS concert and in college. Looking for easygoing roommates who won't make noise after 1am. If you're interested in travelling around Seattle together, let us know.",
-    "walkingDist": 10,
-    "drivingDist": 3,
+    "selfIntro": "A pair of besties looking for another pair! Come and chat with us <3",
+    "roommatePreference": "We would like to find two other girls whom we can explore the city with!",
+    "walkingDist": 30,
+    "drivingDist": 15,
     "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21520.53792388379!2d-122.35617967207523!3d47.60538219842079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab6b122572d%3A0x4cc65f51348e1d43!2sDowntown%20Seattle%2C%20Seattle%2C%20WA!5e0!3m2!1sen!2sus!4v1684866891488!5m2!1sen!2sus",
     "userInformation": [
       {
-        "profileImage": "https://flowbite.com/docs/images/people/profile-picture-3.jpg",
-        "name": "Ella C.",
-        "joinedDate": "August 2022",
-        "ratings": [4.8, 5.0, 4.5, 5.0],
+        "profileImage": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight2&accessoriesType=Round&hairColor=BrownDark&facialHairType=Blank&facialHairColor=Auburn&clotheType=Hoodie&clotheColor=PastelGreen&eyeType=Default&eyebrowType=Default&mouthType=ScreamOpen&skinColor=DarkBrown",
+        "name": "Rachel Z.",
+        "joinedDate": "August 2021",
+        "ratings": [4.7, 5.0, 3.5, 4.0],
         "criteria": [
           "Cleanliness",
           "Communication",
@@ -649,32 +629,32 @@
         ],
         "reviews": [
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
-            "helpfulCount": 2,
+            "name": "Emily K.",
+            "profileImage": "https://avatars.dicebear.com/v2/female/48930fb827a7eb44a8d8658e75c89c51.svg",
+            "joinedDate": "January 2022",
+            "helpfulCount": 1,
             "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
+            "date": "June, 2022",
+            "reviewTitle": "Reliable and Respectful Roommate",
+            "reviewContent": "Rachel was a fantastic roommate who always paid her share of the bills on time and kept our shared spaces clean and organized. She was also incredibly respectful of personal boundaries and made sure everyone felt comfortable in the apartment. It was a pleasure living with her."
           },
           {
-            "name": "Arya M.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
-            "joinedDate": "Feb 2023",
-            "helpfulCount": 1,
-            "rating": 4,
+            "name": "Maya W.",
+            "profileImage": "https://robohash.org/25bcdc8dc4580a9635a76908aa57fcbd?set=set4&bgset=&size=400x400",
+            "joinedDate": "Feburary 2022",
+            "helpfulCount": 2,
+            "rating": 5,
             "date": "March 3, 2023",
-            "reviewTitle": "Cool people",
-            "reviewContent": "Had a great experience living with Ella. She was very friendly and respectful. The only downside was that the Wi-Fi was a bit slow at times."
+            "reviewTitle": "EXTREMELY clean",
+            "reviewContent": "Thank you so much Rachel and Sophia for cleaning the room right before we left!!"
           }
         ]
       },
       {
-        "profileImage": "https://st.depositphotos.com/1144472/1532/i/600/depositphotos_15320783-stock-photo-portrait-of-young-woman-at.jpg",
-        "name": "Rory R.",
-        "joinedDate": "Feb 2023",
-        "ratings": [4.0, 4.2, 3.8, 4.5],
+        "profileImage": "https://avataaars.io/?avatarStyle=Circle&topType=Hijab&accessoriesType=Round&hatColor=Blue02&hairColor=PastelPink&facialHairType=BeardLight&facialHairColor=Brown&clotheType=GraphicShirt&clotheColor=PastelRed&graphicType=Bear&eyeType=Surprised&eyebrowType=RaisedExcitedNatural&mouthType=Serious&skinColor=Yellow",
+        "name": "Sophia T.",
+        "joinedDate": "June 2021",
+        "ratings": [4.5, 4.7, 4.2, 4.5],
         "criteria": [
           "Cleanliness",
           "Communication",
@@ -683,14 +663,14 @@
         ],
         "reviews": [
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
+            "name": "Maya W.",
+            "profileImage": "https://robohash.org/25bcdc8dc4580a9635a76908aa57fcbd?set=set4&bgset=&size=400x400",
+            "joinedDate": "Feburary 2022",
             "helpfulCount": 2,
             "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
+            "date": "March 3, 2023",
+            "reviewTitle": "EXTREMELY clean",
+            "reviewContent": "Thank you so much Rachel and Sophia for cleaning the room right before we left!!"
           }
         ]
       }
@@ -711,17 +691,17 @@
     "neighborhoodList": ["Downtown Seattle"],
     "priceRange": [150, 250],
     "bookingStatus": "booked",
-    "selfIntro": "We are college students and fans of Ed Sheeran! We have already purchased tickets for the concert.",
-    "roommatePreference": "We prefer you are also attending the Ed Sheeran concert and in college. Looking for easygoing roommates who won't make noise after 1am. If you're interested in travelling around Seattle together, let us know.",
-    "walkingDist": 10,
-    "drivingDist": 3,
+    "selfIntro": "Broke college students.",
+    "roommatePreference": "Looking for buddies to hang out with at the concerts! Would be nice if you like to stay up late.",
+    "walkingDist": 25,
+    "drivingDist": 9,
     "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.6042877219343!2d-122.33659748806775!3d47.61438367107031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906be04b660547%3A0xe43a49eea47700a4!2sHyatt%20Regency%20Seattle!5e0!3m2!1sen!2sus!4v1684867378355!5m2!1sen!2sus",
     "userInformation": [
       {
-        "profileImage": "https://flowbite.com/docs/images/people/profile-picture-3.jpg",
-        "name": "Ella C.",
-        "joinedDate": "August 2022",
-        "ratings": [4.8, 5.0, 4.5, 5.0],
+        "profileImage": "https://avataaars.io/?avatarStyle=Circle&topType=WinterHat1&accessoriesType=Wayfarers&hatColor=Gray02&hairColor=Platinum&facialHairType=BeardLight&facialHairColor=Black&clotheType=CollarSweater&clotheColor=Gray01&eyeType=Wink&eyebrowType=UpDownNatural&mouthType=Twinkle&skinColor=DarkBrown",
+        "name": "Jack D.",
+        "joinedDate": "September 2022",
+        "ratings": [4.7, 5.0, 4.9, 4.0],
         "criteria": [
           "Cleanliness",
           "Communication",
@@ -730,32 +710,22 @@
         ],
         "reviews": [
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
-            "helpfulCount": 2,
-            "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
-          },
-          {
-            "name": "Arya M.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/11/25/10/30/phone-5775234_960_720.png",
+            "name": "Edward K.",
+            "profileImage": "https://gravatar.com/avatar/5240a22a863ebf4e6483c0c2328fff8b?s=400&d=robohash&r=x",
             "joinedDate": "Feb 2023",
-            "helpfulCount": 1,
-            "rating": 4,
-            "date": "March 3, 2023",
-            "reviewTitle": "Cool people",
-            "reviewContent": "Had a great experience living with Ella. She was very friendly and respectful. The only downside was that the Wi-Fi was a bit slow at times."
+            "helpfulCount": 3,
+            "rating": 5,
+            "date": "March 17, 2023",
+            "reviewTitle": "Slayyyy!",
+            "reviewContent": "Cool dudes. They know a ton about bars. Would defintely recommend."
           }
         ]
       },
       {
-        "profileImage": "https://st.depositphotos.com/1144472/1532/i/600/depositphotos_15320783-stock-photo-portrait-of-young-woman-at.jpg",
-        "name": "Rory R.",
-        "joinedDate": "Feb 2023",
-        "ratings": [4.0, 4.2, 3.8, 4.5],
+        "profileImage": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortCurly&accessoriesType=Round&hatColor=Pink&hairColor=Blonde&facialHairType=Blank&facialHairColor=Auburn&clotheType=Overall&clotheColor=Black&eyeType=Wink&eyebrowType=Angry&mouthType=Twinkle&skinColor=Tanned",
+        "name": "Peter R.",
+        "joinedDate": "September 2022",
+        "ratings": [5.0, 4.7, 4.8, 4.6],
         "criteria": [
           "Cleanliness",
           "Communication",
@@ -764,14 +734,14 @@
         ],
         "reviews": [
           {
-            "name": "Julia L.",
-            "profileImage": "https://cdn.pixabay.com/photo/2020/12/20/03/58/girl-5846034_960_720.jpg",
-            "joinedDate": "August 2022",
-            "helpfulCount": 2,
+            "name": "Edward K.",
+            "profileImage": "https://gravatar.com/avatar/5240a22a863ebf4e6483c0c2328fff8b?s=400&d=robohash&r=x",
+            "joinedDate": "Feb 2023",
+            "helpfulCount": 3,
             "rating": 5,
-            "date": "May 14, 2023",
-            "reviewTitle": "Favorite roommates!",
-            "reviewContent": "Ella and Rory were fab roomies! They were patient and clean. 10/10 would room together again."
+            "date": "March 17, 2023",
+            "reviewTitle": "Slayyyy!",
+            "reviewContent": "Cool dudes. They know a ton about bars. Would defintely recommend."
           }
         ]
       }
