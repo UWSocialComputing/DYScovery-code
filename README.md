@@ -1,15 +1,17 @@
 # Getting Started with DYScovery
 
-Our website is hosted on GitHub pages, so you can just play with it [here](https://uwsocialcomputing.github.io/DYScovery-code/). Just make sure you open this on a browser from your laptop! 
+Our website is hosted on GitHub pages, so you can just play with it: [https://uwsocialcomputing.github.io/DYScovery-code/](https://uwsocialcomputing.github.io/DYScovery-code/). Just make sure you open this on a browser from your laptop! 
+
+Here is a [wiki](https://uwsocialcomputing.github.io/DYScovery/) for our project. 
 
 # Acknowledgement
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This website was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Other Available Scripts
 
 While the suggested way to play around is just go to [our website](https://uwsocialcomputing.github.io/DYScovery-code/), you can also clone the project and play with it. 
 
-After you clone the project directory, you can run:
+After you clone the project directory, you may need to run `npm install` to install all packaged needed. After that, you can run:
 
 ### `npm start`
 
